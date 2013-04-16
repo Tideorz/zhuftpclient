@@ -1,0 +1,6446 @@
+cscope 15 $HOME/zhuftpclient -q 0000000449 0000035795
+	@In file included from ftpclient_UI.h
+
+	@defines.h
+
+10 
+	~<¬·/š‘.h
+>
+
+11 
+	~<as£¹.h
+>
+
+12 
+	~<”ºo.h
+>
+
+13 
+	~<dœ’t.h
+>
+
+14 
+	~<glib.h
+>
+
+15 
+	~<g½.h
+>
+
+16 
+	~<gtk/gtk.h
+>
+
+17 
+	~<m®loc.h
+>
+
+18 
+	~<Ãtdb.h
+>
+
+19 
+	~<Ãtš‘/š.h
+>
+
+20 
+	~<pwd.h
+>
+
+21 
+	~<±h»ad.h
+>
+
+22 
+	~<sigÇl.h
+>
+
+23 
+	~<¡dio.h
+>
+
+24 
+	~<¡dlib.h
+>
+
+25 
+	~<¡ršg.h
+>
+
+26 
+	~<sys/ioùl.h
+>
+
+27 
+	~<sys/£Ëù.h
+>
+
+28 
+	~<sys/sock‘.h
+>
+
+29 
+	~<sys/¡©.h
+>
+
+30 
+	~<sys/time.h
+>
+
+31 
+	~<sys/ty³s.h
+>
+
+32 
+	~<time.h
+>
+
+33 
+	~<uni¡d.h
+>
+
+36 #iâdeà
+__DEFINES_H
+
+
+37 
+	#__DEFINES_H
+
+
+	)
+
+39 #ifdeà
+__ılu¥lus
+
+
+43 
+	#MAXPATHLEN
+ 256
+
+	)
+
+44 
+	#MAXUSERLEN
+ 50
+
+	)
+
+45 
+	#SENDBUFSIZE
+ 512
+
+	)
+
+46 
+	#READBUFSIZE
+ 512
+
+	)
+
+47 
+	#DELIM
+ " "
+
+	)
+
+50 
+	#TIME_OUT_SEC
+ 50
+
+	)
+
+51 
+cu¼’t_dœ
+[
+MAXPATHLEN
+];
+
+56 
+COLUMN_FILENAME
+,
+
+57 
+COLUMN_FILESIZE
+,
+
+58 
+COLUMN_OWNNAME
+,
+
+59 
+COLUMN_GROUPNAME
+,
+
+60 
+COLUMN_DATE
+,
+
+61 
+COLUMN_FILESTATE
+,
+
+62 
+NUM_COLUMNS
+
+
+67 *
+fe_Çme
+;
+
+68 
+gušt
+ 
+fe_size
+;
+
+69 
+gch¬
+ *
+own_Çme
+;
+
+70 
+gch¬
+ *
+group_Çme
+;
+
+71 
+gch¬
+ *
+d©e
+;
+
+72 
+gch¬
+ *
+fe_¡©e
+;
+
+73 }
+	tFe
+;
+
+75 
+fe_buf
+ 
+	tfe_buf
+;
+
+76 
+	sfe_buf
+
+
+78 
+fe_d©a
+[300];
+
+79 
+fe_buf
+ *
+Ãxt
+;
+
+82 
+sum_fes
+;
+
+87 
+fe_buf
+ *
+febuf_h—d
+;
+
+88 
+fe_buf
+ *
+febuf_
+;
+
+89 
+gšt
+ 
+»mÙe_f’um
+;
+
+94 *
+	g
+;
+
+95 *
+	gd©a_sock
+;
+
+96 }
+	tpÜt_d©a
+;
+
+99 
+	gpÜt_li¡’_sock
+;
+
+103 #ifdeà
+__ılu¥lus
+
+
+	@fileutils.c
+
+9 
+	~"feuts.h
+"
+
+11 
+	gsum_fes
+;
+
+12 
+gboŞ—n
+ 
+	gfœ¡_İ’
+ = 
+TRUE
+;
+
+15 
+gšt
+ 
+	$tÙ®_f’um
+(
+dœ’t
+ *
+d_Ãxt
+, 
+DIR
+ *
+dœ
+)
+
+17 
+gšt
+ 
+sum
+ = 0;
+
+18 
+d_Ãxt
+ !ğ
+NULL
+)
+
+20 
+sum
+++;
+
+21 
+d_Ãxt
+ = 
+	`»addœ
+(
+dœ
+);
+
+23  
+sum
+;
+
+24 
+	}
+}
+
+27 
+	$ä“_fe
+(
+Fe
+ **
+fe
+)
+
+29 
+i
+ = 0;
+
+30 
+Fe
+ *
+±r
+ = *
+fe
+;
+
+31 
+i
+; i<
+sum_fes
+; i++)
+
+33 
+	`ä“
+((*)(
+±r
+->
+fe_Çme
+));
+
+34 
+	`ä“
+((*)(
+±r
+->
+own_Çme
+));
+
+35 
+	`ä“
+((*)(
+±r
+->
+group_Çme
+));
+
+36 
+	`ä“
+((*)(
+±r
+->
+d©e
+));
+
+37 
+	`ä“
+((*)(
+±r
+->
+fe_¡©e
+));
+
+38 
+±r
+++;
+
+40 
+	`ä“
+(*
+fe
+);
+
+41 *
+fe
+ = 
+NULL
+;
+
+42 
+	}
+}
+
+45 
+gboŞ—n
+ 
+	$m®loc_fe
+Ğ
+Fe
+ *
+fe
+, 
+sumfes
+)
+
+47 
+i
+ = 0;
+
+48 
+i
+ ; i<
+sumfes
+; ++i)
+
+50 
+fe
+->
+fe_Çme
+ = (
+gch¬
+*)
+	`m®loc
+(
+MAXPATHLEN
+ *(gchar));
+
+51 if(
+fe
+->
+fe_Çme
+ =ğ
+NULL
+)
+
+53  
+FALSE
+;
+
+55 
+fe
+->
+own_Çme
+ = ( 
+gch¬
+*)
+	`m®loc
+(
+MAXUSERLEN
+ *(gchar));
+
+56 if(
+fe
+->
+own_Çme
+ =ğ
+NULL
+)
+
+58  
+FALSE
+;
+
+60 
+fe
+->
+group_Çme
+ = (
+gch¬
+*)
+	`m®loc
+(
+MAXUSERLEN
+ *(gchar));
+
+61 if(
+fe
+->
+group_Çme
+ =ğ
+NULL
+)
+
+63  
+FALSE
+;
+
+65 
+fe
+->
+d©e
+ = (
+gch¬
+*)
+	`m®loc
+(20*( gchar));
+
+66 if(
+fe
+->
+d©e
+ =ğ
+NULL
+)
+
+68  
+FALSE
+;
+
+71 
+fe
+->
+fe_¡©e
+ = (
+gch¬
+*)
+	`m®loc
+(11*(gchar));
+
+72 if(
+fe
+->
+fe_¡©e
+ =ğ
+NULL
+)
+
+74  
+FALSE
+;
+
+76 
+fe
+++;
+
+78  
+TRUE
+;
+
+79 
+	}
+}
+
+83 
+gboŞ—n
+ 
+	$g‘_fe_šfo
+(*
+fe_Çme
+, 
+Fe
+ *
+loÿl_fe
+)
+
+85 
+¡©
+ 
+s_buff
+;
+
+86 
+¡©us
+ = 
+	`¡©
+(
+fe_Çme
+,&
+s_buff
+);
+
+87 if(
+¡©us
+ != 0)
+
+89 
+	`´štf
+("¡©ƒ¼Ü:%s\n",
+fe_Çme
+);
+
+90 
+	`³¼Ü
+("stat:\n");
+
+91  
+TRUE
+;
+
+93  
+	`g‘_fe_šfo_¡©
+(
+fe_Çme
+,&
+s_buff
+,
+loÿl_fe
+);
+
+94 
+	}
+}
+
+97 
+gboŞ—n
+ 
+	$g‘_fe_šfo_¡©
+(cÚ¡ *
+fe_Çme
+,
+¡©
+ *
+s_buff
+, 
+Fe
+ *
+loÿl_fe
+)
+
+99 
+d©e
+[20];
+
+100 
+mode
+[11] ="----------";
+
+101 if(
+s_buff
+ =ğ
+NULL
+ || 
+loÿl_fe
+ == NULL)
+
+103 
+	`´štf
+("s_bufàÜ†oÿl_fi NULL…oš‹r:%s\n",
+fe_Çme
+);
+
+104  
+FALSE
+;
+
+107 
+mode_t
+ 
+fe_mode
+ = 
+s_buff
+->
+¡_mode
+;
+
+108 
+·sswd
+ *
+·sswd_šfo
+ = 
+	`g‘pwuid
+(
+s_buff
+->
+¡_uid
+);
+
+109 if(
+·sswd_šfo
+ =ğ
+NULL
+)
+
+111 
+	`mem£t
+(&
+”ºo
+,0,(errno));
+
+112 
+	`´štf
+("”ºo:%s",
+	`¡»¼Ü
+(
+”ºo
+));
+
+113 
+	`´štf
+("%s\n",
+fe_Çme
+);
+
+114  
+TRUE
+;
+
+116 if(
+·sswd_šfo
+ !ğ
+NULL
+)
+
+118 
+group
+ *
+group_šfo
+ = 
+	`g‘grgid
+(
+s_buff
+->
+¡_gid
+);
+
+119 if(
+group_šfo
+ =ğ
+NULL
+)
+
+121 
+	`´štf
+("g‘grgidƒ¼Ü:%s\n",
+fe_Çme
+);
+
+123 if(
+group_šfo
+ !ğ
+NULL
+)
+
+126 if(
+	`S_ISDIR
+(
+fe_mode
+))
+
+127 
+mode
+[0] = 'd';
+
+128 if(
+	`S_ISREG
+(
+fe_mode
+))
+
+129 
+mode
+[0] = 'r';
+
+130 if(
+	`S_ISCHR
+(
+fe_mode
+))
+
+131 
+mode
+[0] = 'c';
+
+132 if(
+	`S_ISBLK
+(
+fe_mode
+))
+
+133 
+mode
+[0] = 'b';
+
+134 if(
+	`S_ISFIFO
+(
+fe_mode
+))
+
+135 
+mode
+[0] = 'p';
+
+136 if(
+	`S_ISLNK
+(
+fe_mode
+))
+
+137 
+mode
+[0] = 'l';
+
+138 if(
+	`S_ISSOCK
+(
+fe_mode
+))
+
+139 
+mode
+[0] = 's';
+
+142 
+	`´štf
+("fmod”rÜ:%s\n",
+fe_Çme
+);
+
+143  
+FALSE
+;
+
+148 
+mode
+[1] = (
+fe_mode
+ & 
+S_IRUSR
+) ? 'r' : '-';
+
+149 
+mode
+[2] = (
+fe_mode
+ & 
+S_IWUSR
+) ? 'w' : '-';
+
+150 
+mode
+[3] = (
+fe_mode
+ & 
+S_IXUSR
+) ? 'x' : '-';
+
+151 
+mode
+[4] = (
+fe_mode
+ & 
+S_IRGRP
+) ? 'r' : '-';
+
+152 
+mode
+[5] = (
+fe_mode
+ & 
+S_IWGRP
+) ? 'w' : '-';
+
+153 
+mode
+[6] = (
+fe_mode
+ & 
+S_IXGRP
+) ? 'x' : '-';
+
+154 
+mode
+[7] = (
+fe_mode
+ & 
+S_IROTH
+) ? 'r' : '-';
+
+155 
+mode
+[8] = (
+fe_mode
+ & 
+S_IWOTH
+) ? 'w' : '-';
+
+156 
+mode
+[9] = (
+fe_mode
+ & 
+S_IXOTH
+) ? 'x' : '-';
+
+158 
+	`¡ráime
+(
+d©e
+,13,"%b %d %H:%M",
+	`loÿÉime
+(&(
+s_buff
+->
+¡_mtime
+)));
+
+161 
+	`¡rıy
+(
+loÿl_fe
+->
+fe_Çme
+,file_name);
+
+162 
+loÿl_fe
+->
+fe_size
+ = (
+gšt
+)
+s_buff
+->
+¡_size
+;
+
+163 
+	`¡rıy
+(
+loÿl_fe
+->
+own_Çme
+,
+·sswd_šfo
+->
+pw_Çme
+);
+
+164 
+	`¡rıy
+(
+loÿl_fe
+->
+group_Çme
+,
+group_šfo
+->
+gr_Çme
+);
+
+165 
+	`¡rıy
+(
+loÿl_fe
+->
+d©e
+,date);
+
+166 
+	`¡rıy
+(
+loÿl_fe
+->
+fe_¡©e
+,
+mode
+);
+
+167  
+TRUE
+;
+
+172  
+FALSE
+;
+
+173 
+	}
+}
+
+176 
+gboŞ—n
+ 
+	$wr™e_loÿÎi¡
+(cÚ¡ *
+cu¼’t_dœ
+, 
+Fe
+ **
+loÿl_fe
+)
+
+179 
+gboŞ—n
+ 
+æag
+;
+
+180 
+Ãw_f’ame
+[
+MAXPATHLEN
+];
+
+183 if(
+	`chdœ
+(
+cu¼’t_dœ
+) == -1)
+
+185  
+FALSE
+;
+
+188 
+DIR
+ *
+dœ
+ = 
+	`İ’dœ
+(
+cu¼’t_dœ
+);
+
+189 if(
+dœ
+ =ğ
+NULL
+)
+
+191  
+FALSE
+;
+
+194 
+dœ’t
+ *
+fœ¡_fe
+ = 
+	`»addœ
+(
+dœ
+);
+
+197 if(*
+loÿl_fe
+ !ğ
+NULL
+)
+
+199 
+	`ä“_fe
+(
+loÿl_fe
+);
+
+202 
+sum_fes
+ = 
+	`tÙ®_f’um
+(
+fœ¡_fe
+,
+dœ
+) -1;
+
+203 if(
+sum_fes
+ == 0)
+
+205  
+FALSE
+;
+
+208 *
+loÿl_fe
+ = 
+	`m®loc
+((
+sum_fes
+)*(
+Fe
+));
+
+209 
+Fe
+ * 
+±r
+ = *
+loÿl_fe
+;
+
+211 if(*
+loÿl_fe
+ =ğ
+NULL
+)
+
+213  
+FALSE
+;
+
+216 
+æag
+ = 
+	`m®loc_fe
+(*
+loÿl_fe
+,
+sum_fes
+);
+
+217 if(!
+æag
+)
+
+219  
+FALSE
+;
+
+223 
+	`»wšddœ
+(
+dœ
+);
+
+230 
+dœ’t
+ *
+d_Ãxt
+ = 
+	`»addœ
+(
+dœ
+);
+
+231 if(
+d_Ãxt
+ =ğ
+NULL
+)
+
+235 if(
+	`¡rcmp
+(
+d_Ãxt
+->
+d_Çme
+,".") == 0)
+
+239 if(!
+	`g‘_fe_šfo
+(
+d_Ãxt
+->
+d_Çme
+,
+±r
+))
+
+241  
+FALSE
+;
+
+243 
+±r
+++;
+
+245  
+TRUE
+;
+
+246 
+	}
+}
+
+249 
+gboŞ—n
+ 
+	$wr™e_»mÙ–i¡
+(
+fe_buf
+ *
+febuf_h—d
+, 
+Fe
+ ** 
+»mÙe_fe
+)
+
+251 
+gboŞ—n
+ 
+æag
+;
+
+252 if(*
+»mÙe_fe
+ !ğ
+NULL
+)
+
+254 
+	`ä“_fe
+(
+»mÙe_fe
+);
+
+258 
+»mÙe_fe
+ = 
+	`m®loc
+(
+»mÙe_f’um
+*(
+Fe
+));
+
+259 
+Fe
+ *
+f_±r
+ = *
+»mÙe_fe
+;
+
+261 
+æag
+ = 
+	`m®loc_fe
+(*
+»mÙe_fe
+,
+»mÙe_f’um
+);
+
+262 if(!
+æag
+)
+
+264  
+FALSE
+;
+
+267 
+fe_buf
+ *
+fb_±r
+ = 
+febuf_h—d
+->
+Ãxt
+;
+
+268 
+fb_±r
+ !ğ
+NULL
+)
+
+270 
+	`·r£_fe_buf
+(
+fb_±r
+,
+f_±r
+);
+
+271 
+f_±r
+++;
+
+272 
+fb_±r
+ = fb_±r->
+Ãxt
+;
+
+274  
+TRUE
+;
+
+275 
+	}
+}
+
+279 
+	$·r£_fe_buf
+(
+fe_buf
+ *
+fb_±r
+, 
+Fe
+ *
+f_±r
+)
+
+281 *
+»suÉ
+;
+
+282 
+lše
+[300];
+
+283 
+	`¡rcmp
+(
+lše
+,
+fb_±r
+->
+fe_d©a
+);
+
+286 
+»suÉ
+ = 
+	`¡¹ok
+(
+lše
+, 
+DELIM
+);
+
+287 
+	`¡rcmp
+(
+f_±r
+->
+fe_¡©e
+,
+»suÉ
+);
+
+290 
+»suÉ
+ = 
+	`¡¹ok
+(
+NULL
+,
+DELIM
+);
+
+293 
+»suÉ
+ = 
+	`¡¹ok
+(
+NULL
+,
+DELIM
+);
+
+294 
+	`¡rcmp
+(
+f_±r
+->
+own_Çme
+,
+»suÉ
+);
+
+297 
+»suÉ
+ = 
+	`¡¹ok
+(
+NULL
+,
+DELIM
+);
+
+298 
+	`¡rcmp
+(
+f_±r
+->
+group_Çme
+,
+»suÉ
+);
+
+301 
+»suÉ
+ = 
+	`¡¹ok
+(
+NULL
+,
+DELIM
+);
+
+302 
+f_±r
+->
+fe_size
+ = 
+	`©oi
+(
+»suÉ
+);
+
+305 
+»suÉ
+ = 
+	`¡¹ok
+(
+NULL
+,
+DELIM
+);
+
+306 
+	`¡rcmp
+(
+f_±r
+->
+d©e
+,
+»suÉ
+);
+
+309 
+»suÉ
+ = 
+	`¡¹ok
+(
+NULL
+,
+DELIM
+);
+
+310 
+	`¡rcmp
+(
+f_±r
+->
+fe_Çme
+,
+»suÉ
+);
+
+311 
+	}
+}
+
+	@fileutils.h
+
+9 
+	~"defšes.h
+"
+
+10 #iâdeà
+__FILEUTILS_H
+
+
+11 
+	#__FILEUTILS_H
+
+
+	)
+
+13 #ifdeà
+__ılu¥lus
+
+
+18 
+gšt
+ 
+tÙ®_f’um
+(
+dœ’t
+ *
+d_Ãxt
+, 
+DIR
+ *
+dœ
+);
+
+19 
+ä“_fe
+Ğ
+Fe
+ **
+fe
+);
+
+20 
+gboŞ—n
+ 
+m®loc_fe
+Ğ
+Fe
+ *
+fe
+, 
+sum_fes
+);
+
+21 
+gboŞ—n
+ 
+g‘_fe_šfo
+(*
+fe_Çme
+, 
+Fe
+ *
+loÿl_fe
+);
+
+22 
+gboŞ—n
+ 
+g‘_fe_šfo_¡©
+(cÚ¡ *
+fe_Çme
+,
+¡©
+ *
+s_buff
+, 
+Fe
+ *
+loÿl_fe
+);
+
+23 
+gboŞ—n
+ 
+wr™e_loÿÎi¡
+(cÚ¡ *
+cu¼’t_dœ
+, 
+Fe
+ **
+loÿl_fe
+);
+
+28 #ifdeà
+__ılu¥lus
+
+
+	@ftpclient_UI.c
+
+10 
+	~"ápş›Á_UI.h
+"
+
+12 
+GtkWidg‘
+ *
+	gsw_loÿÎi¡
+;
+
+13 
+GtkWidg‘
+ *
+	gŒ“v›w_loÿl
+;
+
+14 
+GtkWidg‘
+ *
+	g’Œy_loÿlwd
+;
+
+16 
+GtkWidg‘
+ *
+	gsw_»mÙ–i¡
+;
+
+17 
+GtkWidg‘
+ *
+	gŒ“v›w_»mÙe
+;
+
+19 
+GtkWidg‘
+ *
+	g’Œy_IP
+;
+
+20 
+GtkWidg‘
+ *
+	g’Œy_PORT
+;
+
+21 
+GtkWidg‘
+ *
+	g’Œy_u£ºame
+;
+
+22 
+GtkWidg‘
+ *
+	g’Œy_PASSWD
+;
+
+25 
+GtkEÁryBufãr
+ *
+	g’Œy_bufãr_£rv”wd
+;
+
+29 
+GtkWidg‘
+ *
+	g‹xt_v›w_š‹¼aù
+;
+
+30 
+GtkTextM¬k
+ *
+	g‹xt_m¬k_log
+;
+
+33 
+gboŞ—n
+ 
+	gis_abÜt_down
+ = 
+FALSE
+;
+
+35 
+±h»ad_mu‹x_t
+ 
+	ggtk_mu‹x
+;
+
+38 
+	gsum_fes
+;
+
+39 
+	gcommªd
+[
+SENDBUFSIZE
+];
+
+42 
+	gcommªd_sock
+;
+
+44 
+	gd©a_sock
+ = -1;
+
+46 
+gšt
+ 
+	gd©a_cÚÃùiÚ_m‘hod
+ = 1;
+
+50 
+gšt
+ 
+	$d–‘e_ev’t_tİ_wšdow
+(
+GtkWidg‘
+ *
+widg‘
+, 
+GdkEv’t
+ *
+ev’t
+, 
+gpoš‹r
+ 
+d©a
+)
+
+52  
+FALSE
+;
+
+53 
+	}
+}
+
+56 
+	$de¡roy
+(
+GtkWidg‘
+ *
+widg‘
+, 
+gpoš‹r
+ 
+d©a
+)
+
+58 
+	`gtk_maš_qu™
+();
+
+59 
+	}
+}
+
+62 
+	$de¡roy_widg‘
+(
+GtkWidg‘
+ *
+widg‘
+, 
+gpoš‹r
+ 
+d©a
+)
+
+64 
+GtkWidg‘
+ *
+de_widg‘
+ = (GtkWidg‘*è
+d©a
+;
+
+65 
+	`gtk_widg‘_de¡roy
+(
+de_widg‘
+);
+
+66 
+	}
+}
+
+69 
+GtkT»eMod–
+ *
+	$ü—‹_li¡_mod–
+(
+Fe
+ *
+fe_d©a
+,
+gšt
+ 
+sum_fes
+)
+
+71 
+gšt
+ 
+i
+;
+
+72 
+GtkT»eI‹r
+ 
+™”
+;
+
+73 
+GtkLi¡StÜe
+ *
+¡Üe
+;
+
+74 
+¡Üe
+ = 
+	`gtk_li¡_¡Üe_Ãw
+(
+NUM_COLUMNS
+,
+
+75 
+G_TYPE_STRING
+,
+
+76 
+G_TYPE_UINT
+,
+
+77 
+G_TYPE_STRING
+,
+
+78 
+G_TYPE_STRING
+,
+
+79 
+G_TYPE_STRING
+,
+
+80 
+G_TYPE_STRING
+
+
+82 
+i
+=0; i<
+sum_fes
+; i++)
+
+84 
+	`gtk_li¡_¡Üe_­³nd
+(
+¡Üe
+,&
+™”
+);
+
+85 
+	`gtk_li¡_¡Üe_£t
+(
+¡Üe
+,&
+™”
+,
+
+86 
+COLUMN_FILENAME
+, ((
+fe_d©a
+->
+fe_Çme
+)),
+
+87 
+COLUMN_FILESIZE
+, (
+fe_d©a
+->
+fe_size
+),
+
+88 
+COLUMN_OWNNAME
+, ((
+fe_d©a
+->
+own_Çme
+)),
+
+89 
+COLUMN_GROUPNAME
+, ((
+fe_d©a
+->
+group_Çme
+)),
+
+90 
+COLUMN_DATE
+, ((
+fe_d©a
+->
+d©e
+)),
+
+91 
+COLUMN_FILESTATE
+, ((
+fe_d©a
+->
+fe_¡©e
+)),
+
+93 
+fe_d©a
+++;
+
+95  
+	`GTK_TREE_MODEL
+(
+¡Üe
+);
+
+97 
+	}
+}
+
+99 
+	$add_cŞumns
+ (
+GtkT»eV›w
+ *
+Œ“v›w
+)
+
+101 
+GtkC–lR’d””
+ *
+»nd””
+;
+
+102 
+GtkT»eV›wCŞumn
+ *
+cŞumn
+;
+
+105 
+»nd””
+ = 
+	`gtk_ûÎ_»nd””_‹xt_Ãw
+ ();
+
+106 
+cŞumn
+ = 
+	`gtk_Œ“_v›w_cŞumn_Ãw_w™h_©Œibu‹s
+ ("File Name",
+
+107 
+»nd””
+,
+
+109 
+COLUMN_FILENAME
+,
+
+110 
+NULL
+);
+
+111 
+	`gtk_Œ“_v›w_cŞumn_£t_sÜt_cŞumn_id
+ (
+cŞumn
+, 
+COLUMN_FILENAME
+);
+
+112 
+	`gtk_Œ“_v›w_­³nd_cŞumn
+ (
+Œ“v›w
+, 
+cŞumn
+);
+
+115 
+»nd””
+ = 
+	`gtk_ûÎ_»nd””_‹xt_Ãw
+ ();
+
+116 
+cŞumn
+ = 
+	`gtk_Œ“_v›w_cŞumn_Ãw_w™h_©Œibu‹s
+ (("File Size"),
+
+117 
+»nd””
+,
+
+119 
+COLUMN_FILESIZE
+,
+
+120 
+NULL
+);
+
+121 
+	`gtk_Œ“_v›w_cŞumn_£t_sÜt_cŞumn_id
+ (
+cŞumn
+, 
+COLUMN_FILESIZE
+);
+
+122 
+	`gtk_Œ“_v›w_­³nd_cŞumn
+ (
+Œ“v›w
+, 
+cŞumn
+);
+
+125 
+»nd””
+ = 
+	`gtk_ûÎ_»nd””_‹xt_Ãw
+ ();
+
+126 
+cŞumn
+ = 
+	`gtk_Œ“_v›w_cŞumn_Ãw_w™h_©Œibu‹s
+ (("Own Name"),
+
+127 
+»nd””
+,
+
+129 
+COLUMN_OWNNAME
+,
+
+130 
+NULL
+);
+
+131 
+	`gtk_Œ“_v›w_cŞumn_£t_sÜt_cŞumn_id
+ (
+cŞumn
+, 
+COLUMN_OWNNAME
+);
+
+132 
+	`gtk_Œ“_v›w_­³nd_cŞumn
+ (
+Œ“v›w
+, 
+cŞumn
+);
+
+135 
+cŞumn
+ = 
+	`gtk_Œ“_v›w_cŞumn_Ãw_w™h_©Œibu‹s
+ (("Group Name"),
+
+136 
+»nd””
+,
+
+138 
+COLUMN_GROUPNAME
+,
+
+139 
+NULL
+);
+
+141 
+	`gtk_Œ“_v›w_cŞumn_£t_sÜt_cŞumn_id
+ (
+cŞumn
+, 
+COLUMN_GROUPNAME
+);
+
+142 
+	`gtk_Œ“_v›w_­³nd_cŞumn
+ (
+Œ“v›w
+, 
+cŞumn
+);
+
+145 
+cŞumn
+ = 
+	`gtk_Œ“_v›w_cŞumn_Ãw_w™h_©Œibu‹s
+ (("Date"),
+
+146 
+»nd””
+,
+
+148 
+COLUMN_DATE
+,
+
+149 
+NULL
+);
+
+151 
+	`gtk_Œ“_v›w_cŞumn_£t_sÜt_cŞumn_id
+ (
+cŞumn
+, 
+COLUMN_DATE
+);
+
+152 
+	`gtk_Œ“_v›w_­³nd_cŞumn
+ (
+Œ“v›w
+, 
+cŞumn
+);
+
+155 
+cŞumn
+ = 
+	`gtk_Œ“_v›w_cŞumn_Ãw_w™h_©Œibu‹s
+ (("Attribute"),
+
+156 
+»nd””
+,
+
+158 
+COLUMN_FILESTATE
+,
+
+159 
+NULL
+);
+
+161 
+	`gtk_Œ“_v›w_cŞumn_£t_sÜt_cŞumn_id
+ (
+cŞumn
+, 
+COLUMN_FILESTATE
+);
+
+162 
+	`gtk_Œ“_v›w_­³nd_cŞumn
+ (
+Œ“v›w
+, 
+cŞumn
+);
+
+164 
+	}
+}
+
+167 
+gboŞ—n
+ 
+	$»¥Ú£_’Œy_’‹r
+(
+GtkWidg‘
+ *
+widg‘
+, 
+GdkEv’t
+ *
+ev’t
+, 
+gpoš‹r
+ 
+d©a
+)
+
+169 cÚ¡ 
+gch¬
+* 
+·th
+;
+
+170 
+cw
+[
+MAXPATHLEN
+];
+
+171 
+·th
+ = 
+	`gtk_’Œy_g‘_‹xt
+(
+	`GTK_ENTRY
+(
+widg‘
+));
+
+172 
+Fe
+ * 
+fe
+ = 
+loÿl_fe
+;
+
+173 
+GtkT»eMod–
+ *
+Ãw
+;
+
+175 if(
+	`wr™e_loÿÎi¡
+(
+·th
+,&
+loÿl_fe
+è=ğ
+FALSE
+)
+
+177 
+	`show_‹xt_Ãws
+("Path Error!!!");
+
+178  
+FALSE
+;
+
+180 
+	`g‘cwd
+(
+cw
+,
+MAXPATHLEN
+);
+
+181 
+	`gtk_’Œy_£t_‹xt
+(
+	`GTK_ENTRY
+(
+widg‘
+),
+cw
+);
+
+183 
+Ãw
+ = 
+	`ü—‹_li¡_mod–
+(
+loÿl_fe
+,
+sum_fes
+);
+
+184 
+	`gtk_Œ“_v›w_£t_mod–
+((
+GtkT»eV›w
+*)
+Œ“v›w_loÿl
+,
+Ãw
+);
+
+185 
+	`g_objeù_uÄef
+(
+Ãw
+);
+
+186  
+TRUE
+;
+
+187 
+	}
+}
+
+190 
+gboŞ—n
+ 
+	$£t_»mÙe_f–i¡_Œ“v›w_mod–
+()
+
+192 
+GtkT»eMod–
+ *
+Ãw
+;
+
+193 if(
+	`wr™e_»mÙ–i¡
+(
+febuf_h—d
+,&
+»mÙe_fe
+è=ğ
+FALSE
+)
+
+195 
+	`show_‹xt_Ãws
+("Remote filelist create Error");
+
+196  
+FALSE
+;
+
+199 
+Ãw
+ = 
+	`ü—‹_li¡_mod–
+(
+»mÙe_fe
+,
+»mÙe_f’um
+);
+
+200 
+	`gtk_Œ“_v›w_£t_mod–
+((
+GtkT»eV›w
+*)
+Œ“v›w_»mÙe
+,
+Ãw
+);
+
+201 
+	`g_objeù_uÄef
+(
+Ãw
+);
+
+202  
+TRUE
+;
+
+203 
+	}
+}
+
+207 
+	$d—l_w™h_”rÜ
+(
+gšt
+ 
+æag
+)
+
+209 
+æag
+)
+
+212 
+	`show_‹xt_Ãws
+("Tryo„econnecthe server");
+
+215 
+	`show_‹xt_Ãws
+("Havn't gothe server„eply");
+
+218 
+	`show_‹xt_Ãws
+("Command contentƒrror");
+
+223 
+	}
+}
+
+226 
+gboŞ—n
+ 
+	$£nd_ªd_»¥Ú£
+(
+sock
+,*
+commªd
+, cÚ¡ *
+ok_¡r
+, *
+»¶y
+, 
+Ën
+)
+
+228 
+	`show_‹xt_Ãws
+("\n");
+
+229 
+	`show_‹xt_Ãws
+(
+commªd
+);
+
+230 
+commªd
+[
+Ën
+] = '\0';
+
+231 if(
+sock
+ == -1)
+
+233 
+	`show_‹xt_Ãws
+("Command connection has been close");
+
+234  
+FALSE
+;
+
+236 
+æag
+ = 
+	`cÚŒŞ_cÚÃùiÚ_İ”©iÚ
+(
+sock
+, 
+commªd
+, 
+»¶y
+, 
+ok_¡r
+);
+
+237 
+	`show_‹xt_Ãws
+(
+»¶y
+);
+
+238 if(
+æag
+ != 0)
+
+240 
+	`d—l_w™h_”rÜ
+(
+æag
+);
+
+241 
+	`şo£
+(
+sock
+);
+
+242  
+FALSE
+;
+
+244  
+TRUE
+;
+
+245 
+	}
+}
+
+248 
+	$g‘_wÜk_dœeùÜy
+(* 
+»¶y
+)
+
+250 *
+p
+ = 
+	`¡¹ok
+(
+»¶y
+,"\"");
+
+251 
+p
+ = 
+	`¡¹ok
+(
+NULL
+,"\"");
+
+252 
+	`gtk_’Œy_bufãr_£t_‹xt
+(
+’Œy_bufãr_£rv”wd
+,
+p
+,
+	`¡¾’
+(p));
+
+253 
+	}
+}
+
+256 
+gboŞ—n
+ 
+	$»¥Ú£_bu‰Ú_logš_down
+(
+GtkWidg‘
+ *
+widg‘
+, 
+GdkEv’t
+ *
+ev’t
+, 
+gpoš‹r
+ 
+d©a
+)
+
+258 
+gšt
+ 
+æag
+;
+
+259 
+gboŞ—n
+ 
+»suÉ
+;
+
+260 
+»¶y
+[100];
+
+262 cÚ¡ 
+gch¬
+ *
+
+;
+
+263 cÚ¡ 
+gch¬
+ *
+pÜt
+;
+
+264 cÚ¡ 
+gch¬
+ *
+u£r_Çme
+;
+
+265 cÚ¡ 
+gch¬
+ *
+·sswd
+;
+
+267 
+
+ = 
+	`gtk_’Œy_g‘_‹xt
+(
+	`GTK_ENTRY
+(
+’Œy_IP
+));
+
+268 
+pÜt
+ = 
+	`gtk_’Œy_g‘_‹xt
+(
+	`GTK_ENTRY
+(
+’Œy_PORT
+));
+
+269 
+u£r_Çme
+ = 
+	`gtk_’Œy_g‘_‹xt
+(
+	`GTK_ENTRY
+(
+’Œy_u£ºame
+));
+
+270 
+·sswd
+ = 
+	`gtk_’Œy_g‘_‹xt
+(
+	`GTK_ENTRY
+(
+’Œy_PASSWD
+));
+
+272 if(
+	`¡rcmp
+(
+
+,""è=ğ0 || sŒcmp(
+pÜt
+,""è=ğ0 || sŒcmp(
+u£r_Çme
+,"") == 0)
+
+274 
+	`show_‹xt_Ãws
+("Login Info Not Complete!!!");
+
+275  
+FALSE
+;
+
+279 
+commªd_sock
+ = 
+	`make_£rv”_cÚÃùiÚ
+(
+
+,
+pÜt
+,0);
+
+280 if(
+commªd_sock
+ == -1)
+
+282 
+	`show_‹xt_Ãws
+("Can't create command connection,\n Server or Network is‚ot doing!!!");
+
+283  
+FALSE
+;
+
+285 
+	`show_‹xt_Ãws
+("Connection Finished");
+
+287 
+»suÉ
+ = 
+	`g‘_»¶y_äom_£rv”
+(
+commªd_sock
+, 
+»¶y
+);
+
+288 if(!
+»suÉ
+)
+
+290 
+	`d—l_w™h_”rÜ
+(-2);
+
+291 
+	`şo£
+(
+commªd_sock
+);
+
+292  
+FALSE
+;
+
+294 
+	`show_‹xt_Ãws
+(
+»¶y
+);
+
+296 
+»suÉ
+ = 
+	`commªd_is_ok
+("220", 
+»¶y
+);
+
+297 if(!
+»suÉ
+)
+
+299 
+	`d—l_w™h_”rÜ
+(-3);
+
+300 
+	`şo£
+(
+commªd_sock
+);
+
+301  
+FALSE
+;
+
+306 
+Ën
+ = 
+	`¥rštf
+(
+commªd
+, "USER %s\r", 
+u£r_Çme
+);
+
+307 
+»suÉ
+ = 
+	`£nd_ªd_»¥Ú£
+(
+commªd_sock
+, 
+commªd
+, "331", 
+»¶y
+, 
+Ën
+);
+
+308 if(!
+»suÉ
+)
+
+310  
+FALSE
+;
+
+314 
+Ën
+ = 
+	`¥rštf
+(
+commªd
+, "PASS %s\r",
+·sswd
+);
+
+315 
+»suÉ
+ = 
+	`£nd_ªd_»¥Ú£
+(
+commªd_sock
+, 
+commªd
+, "230", 
+»¶y
+, 
+Ën
+);
+
+316 if(!
+»suÉ
+)
+
+318  
+FALSE
+;
+
+322 
+Ën
+ = 
+	`¥rštf
+(
+commªd
+,"SYST\r",
+NULL
+);
+
+323 
+»suÉ
+ = 
+	`£nd_ªd_»¥Ú£
+(
+commªd_sock
+, 
+commªd
+, "215", 
+»¶y
+, 
+Ën
+);
+
+324 if(!
+»suÉ
+)
+
+326  
+FALSE
+;
+
+330 
+Ën
+ = 
+	`¥rštf
+(
+commªd
+,"PWD\r",
+NULL
+);
+
+331 
+»suÉ
+ = 
+	`£nd_ªd_»¥Ú£
+(
+commªd_sock
+, 
+commªd
+, "257", 
+»¶y
+, 
+Ën
+);
+
+332 if(!
+»suÉ
+)
+
+334  
+FALSE
+;
+
+336 
+	`g‘_wÜk_dœeùÜy
+(
+»¶y
+);
+
+338 
+	`show_‹xt_Ãws
+("OK!!!!!!!!!!!");
+
+341 
+	`make_d©a_cÚÃùiÚ
+(
+NULL
+);
+
+342  
+TRUE
+;
+
+343 
+	}
+}
+
+346 * 
+	$make_d©a_cÚÃùiÚ
+(*
+¬g
+)
+
+349 
+	`show_‹xt_Ãws
+("Input into make_data_connection");
+
+350 
+»¶y
+[100];
+
+351 
+Ën
+;
+
+352 
+gšt
+ 
+»suÉ
+;
+
+355 if(
+d©a_cÚÃùiÚ_m‘hod
+ == 1)
+
+358 *
+
+ = "127.0.0.1";
+
+359 
+sockaddr_š
+ 
+pÜt_£rv”_sš
+;
+
+362 
+»suÉ
+ = 
+	`pÜt_Œªsãr_bšd
+(&
+pÜt_£rv”_sš
+,
+
+);
+
+363 
+»suÉ
+)
+
+366 
+	`show_‹xt_Ãws
+("the ipƒrror!!!");
+
+367 
+	`şo£
+(
+pÜt_li¡’_sock
+);
+
+370 
+	`show_‹xt_Ãws
+("port method bindƒrror");
+
+371 
+	`şo£
+(
+pÜt_li¡’_sock
+);
+
+374 
+	`show_‹xt_Ãws
+("listenƒrror");
+
+375 
+	`şo£
+(
+pÜt_li¡’_sock
+);
+
+382 
+sockËn_t
+ 
+s_Ën
+ = (
+pÜt_£rv”_sš
+);
+
+383 if(
+	`g‘sockÇme
+(
+pÜt_li¡’_sock
+,(
+sockaddr
+*)&
+pÜt_£rv”_sš
+,&
+s_Ën
+) != 0)
+
+385 
+	`show_‹xt_Ãws
+("Can't get…ort info");
+
+387 
+pÜt
+ = 
+	`Áohs
+(
+pÜt_£rv”_sš
+.
+sš_pÜt
+);
+
+388 
+fÜm”
+[5];
+
+389 
+	`¥rštf
+(
+fÜm”
+,"%d",
+pÜt
+/256);
+
+390 
+Ï‰”
+[5];
+
+391 
+	`¥rštf
+(
+Ï‰”
+,"%d",
+pÜt
+%256);
+
+394 
+Ën
+ = 
+	`¥rštf
+(
+commªd
+,"PORT %s,%s,%s\r\n","127,0,0,1",
+fÜm”
+,
+Ï‰”
+);
+
+395 
+»suÉ
+ = 
+	`£nd_ªd_»¥Ú£
+(
+commªd_sock
+,
+commªd
+,"200",
+»¶y
+,
+Ën
+);
+
+396 if(
+»suÉ
+ =ğ
+FALSE
+)
+
+402 
+Ën
+ = 
+	`¥rštf
+(
+commªd
+,"LIST\r\n",
+NULL
+);
+
+403 
+»suÉ
+ = 
+	`£nd_ªd_»¥Ú£
+(
+commªd_sock
+,
+commªd
+,"150",
+»¶y
+,
+Ën
+);
+
+404 if(
+»suÉ
+ =ğ
+FALSE
+)
+
+410 
+sockaddr_š
+ 
+ş›Á_sš
+;
+
+413 
+ş›Á_Ën
+ = (
+ş›Á_sš
+);
+
+414 
+d©a_sock
+ = 
+	`acû±
+(
+pÜt_li¡’_sock
+,(
+sockaddr
+*)&
+ş›Á_sš
+,&
+ş›Á_Ën
+);
+
+415 if(
+d©a_sock
+ < 0)
+
+417 if(
+”ºo
+ =ğ
+EINTR
+)
+
+421 
+	`³¼Ü
+("acceptƒrror:\n");
+
+422 
+	`ex™
+(0);
+
+427 
+	`g‘_»mÙe_šfo
+();
+
+431 if(
+d©a_cÚÃùiÚ_m‘hod
+ == 2)
+
+433 
+	`show_‹xt_Ãws
+("passive method");
+
+436 
+	}
+}
+
+439 
+	$g‘_»mÙe_šfo
+()
+
+441 if(
+d©a_sock
+ < 0)
+
+446 
+»suÉ
+ = 
+	`g‘_»mÙe_f–i¡
+(
+d©a_sock
+);
+
+447 
+»suÉ
+)
+
+450 
+	`show_‹xt_Ãws
+("Remote filelist†ink malloc Error!!!");
+
+453 
+	`show_‹xt_Ãws
+("Recv Error!!!(data connection)");
+
+460 
+	`£t_»mÙe_f–i¡_Œ“v›w_mod–
+();
+
+461 
+	`show_‹xt_Ãws
+("set„eomte model success\n");
+
+462 
+	}
+}
+
+466 
+gboŞ—n
+ 
+	$»¥Ú£_bu‰Ú_abÜt_down
+(
+GtkWidg‘
+ *
+widg‘
+, 
+gpoš‹r
+ 
+d©a
+)
+
+468 
+commªd
+[20];
+
+469 
+»¶y
+[100];
+
+470 
+gboŞ—n
+ 
+»suÉ
+;
+
+471 if(
+d©a_sock
+ != -1)
+
+473 
+Ën
+ = 
+	`¥rštf
+(
+commªd
+,"ABOR\r",
+NULL
+);
+
+474 
+	`£nd_ªd_»¥Ú£
+(
+commªd_sock
+,
+commªd
+,"226",
+»¶y
+,
+Ën
+);
+
+475 if(!
+»suÉ
+)
+
+477  
+FALSE
+;
+
+480 
+	`şo£
+(
+d©a_sock
+);
+
+481 
+d©a_sock
+ = -1;
+
+484 
+	`show_‹xt_Ãws
+("Haven't make data connection ");
+
+485  
+TRUE
+;
+
+486 
+	}
+}
+
+490 
+	$»¥Ú£_¿dio_bu‰Ú
+(
+GtkWidg‘
+ * 
+widg‘
+, 
+gpoš‹r
+ 
+d©a
+)
+
+492 
+d©a_cÚÃùiÚ_m‘hod
+ = (
+gšt
+)
+d©a
+;
+
+493 
+	}
+}
+
+497 
+	$show_‹xt_Ãws
+(cÚ¡ *
+msg
+)
+
+499 
+GtkTextI‹r
+ 
+™”
+;
+
+500 
+GtkTextBufãr
+ *
+buf
+;
+
+501 *
+’dl
+ = "\n";
+
+502 
+buf
+ = 
+	`gtk_‹xt_v›w_g‘_bufãr
+((
+GtkTextV›w
+*)
+‹xt_v›w_š‹¼aù
+);
+
+503 
+	`gtk_‹xt_bufãr_g‘_’d_™”
+(
+buf
+,&
+™”
+);
+
+504 
+	`gtk_‹xt_bufãr_š£¹
+(
+buf
+,&
+™”
+,
+msg
+,-1);
+
+505 
+	`gtk_‹xt_bufãr_š£¹
+(
+buf
+,&
+™”
+,
+’dl
+,-1);
+
+506 
+	`gtk_‹xt_v›w_£t_bufãr
+((
+GtkTextV›w
+*)
+‹xt_v›w_š‹¼aù
+,
+buf
+);
+
+507 
+‹xt_m¬k_log
+ = 
+	`gtk_‹xt_bufãr_ü—‹_m¬k
+(
+buf
+,
+NULL
+,&
+™”
+,1);
+
+510 
+	`gtk_‹xt_bufãr_move_m¬k
+(
+buf
+,
+‹xt_m¬k_log
+,&
+™”
+);
+
+511 
+	`gtk_‹xt_v›w_süŞl_to_m¬k
+(
+	`GTK_TEXT_VIEW
+(
+‹xt_v›w_š‹¼aù
+),
+‹xt_m¬k_log
+,0,1,1,1);
+
+512 
+	}
+}
+
+516 
+gch¬
+ *
+	$_
+(*
+¡ršg
+)
+
+518  (
+	`g_loÿË_to_utf8
+(
+¡ršg
+,-1,
+NULL
+,NULL,NULL));
+
+519 
+	}
+}
+
+522 
+GtkWidg‘
+ *
+	$ü—‹_wšdow
+()
+
+526 if(
+	`±h»ad_mu‹x_š™
+(&
+gtk_mu‹x
+,
+NULL
+) != 0)
+
+528 
+	`ex™
+(0);
+
+532 
+GtkWidg‘
+ *
+maš_wšdow
+;
+
+535 
+GtkWidg‘
+ *
+vbox_maš
+;
+
+538 
+GtkWidg‘
+ *
+hbox_m’u
+;
+
+539 
+GtkWidg‘
+ *
+m’u_b¬
+;
+
+540 
+GtkWidg‘
+ *
+m’u_áp
+;
+
+541 
+GtkWidg‘
+ *
+™em_FTP
+;
+
+542 
+GtkWidg‘
+ *
+™em_Qu™
+;
+
+544 
+GtkWidg‘
+ *
+m’u_h–p
+;
+
+545 
+GtkWidg‘
+ *
+™em_H–p
+;
+
+546 
+GtkWidg‘
+ *
+™em_About
+;
+
+551 
+GtkWidg‘
+ *
+hbox_logš
+;
+
+552 
+GtkWidg‘
+ *
+Ïb–_IP
+;
+
+553 
+GtkWidg‘
+ *
+Ïb–_PORT
+;
+
+554 
+GtkWidg‘
+ *
+Ïb–_u£ºame
+;
+
+555 
+GtkWidg‘
+ *
+Ïb–_PASSWD
+;
+
+556 
+GtkWidg‘
+ *
+bu‰Ú_logš
+;
+
+557 
+GtkWidg‘
+ *
+image_logš
+;
+
+558 
+GtkWidg‘
+ *
+bu‰Ú_abÜt
+;
+
+559 
+GtkWidg‘
+ *
+image_abÜt
+;
+
+560 
+GtkWidg‘
+ *
+vbox_¿dio_bu‰Ú
+;
+
+561 
+GtkWidg‘
+ *
+¿dio_bu‰Ú_pÜt
+;
+
+562 
+GtkWidg‘
+ *
+¿dio_bu‰Ú_·ssive
+;
+
+565 
+GtkWidg‘
+ *
+hbox_f–i¡
+;
+
+567 
+GtkWidg‘
+ *
+vbox_loÿÎi¡
+;
+
+568 
+GtkWidg‘
+ *
+’Œy_buf_cw
+;
+
+570 
+GtkWidg‘
+ *
+vbox_»mÙ–i¡
+;
+
+571 
+GtkWidg‘
+ *
+’Œy_»mÙewd
+;
+
+575 
+GtkWidg‘
+ *
+hbox_scheduË
+;
+
+578 
+GtkWidg‘
+ *
+hbox_š‹¼aù
+;
+
+579 
+GtkWidg‘
+ *
+sw_š‹¼aù
+;
+
+583 
+maš_wšdow
+ = 
+	`gtk_wšdow_Ãw
+(
+GTK_WINDOW_TOPLEVEL
+);
+
+584 
+	`gtk_widg‘_£t_usize
+(
+maš_wšdow
+,1200,600);
+
+585 
+	`gtk_wšdow_£t_t™Ë
+((
+GtkWšdow
+*)
+maš_wšdow
+,
+	`_
+("zhuhaichao-ftpclient"));
+
+586 
+	`gtk_wšdow_£t_pos™iÚ
+((
+GtkWšdow
+*)
+maš_wšdow
+,
+GTK_WIN_POS_CENTER
+);
+
+587 
+	`gtk_wšdow_£t_»sizabË
+((
+GtkWšdow
+*)
+maš_wšdow
+,
+TRUE
+);
+
+588 
+	`g_sigÇl_cÚÃù
+(
+maš_wšdow
+,"d–‘e_ev’t",
+	`G_CALLBACK
+(
+d–‘e_ev’t_tİ_wšdow
+),
+NULL
+);
+
+589 
+	`g_sigÇl_cÚÃù
+(
+maš_wšdow
+,"de¡roy",
+	`G_CALLBACK
+(
+de¡roy
+),
+NULL
+);
+
+592 
+vbox_maš
+ = 
+	`gtk_vbox_Ãw
+(
+FALSE
+,0);
+
+593 
+	`gtk_widg‘_show
+(
+vbox_maš
+);
+
+594 
+	`gtk_cÚš”_add
+((
+GtkCÚš”
+*)
+maš_wšdow
+,
+vbox_maš
+);
+
+599 
+hbox_m’u
+ = 
+	`gtk_hbox_Ãw
+(
+FALSE
+,0);
+
+600 
+	`gtk_widg‘_show
+(
+hbox_m’u
+);
+
+601 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_maš
+,
+hbox_m’u
+,
+FALSE
+,FALSE,0);
+
+603 
+m’u_b¬
+ = 
+	`gtk_m’u_b¬_Ãw
+();
+
+604 
+	`gtk_widg‘_show
+(
+m’u_b¬
+);
+
+605 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_m’u
+,
+m’u_b¬
+,
+TRUE
+,TRUE,0);
+
+607 
+m’u_áp
+ = 
+	`gtk_m’u_Ãw
+();
+
+608 
+	`gtk_widg‘_show
+(
+m’u_áp
+);
+
+610 
+™em_FTP
+ = (
+GtkWidg‘
+*)
+	`gtk_m’u_™em_Ãw_w™h_Ïb–
+(
+	`_
+("FTP"));
+
+611 
+	`gtk_widg‘_show
+(
+™em_FTP
+);
+
+613 
+™em_Qu™
+ = (
+GtkWidg‘
+*)
+	`gtk_m’u_™em_Ãw_w™h_Ïb–
+(
+	`_
+("Quit"));
+
+614 
+	`gtk_widg‘_show
+(
+™em_Qu™
+);
+
+616 
+	`gtk_m’u_sh–l_­³nd
+(
+	`GTK_MENU_SHELL
+(
+m’u_b¬
+),
+™em_FTP
+);
+
+617 
+	`gtk_m’u_™em_£t_subm’u
+(
+	`GTK_MENU_ITEM
+(
+™em_FTP
+),
+m’u_áp
+);
+
+618 
+	`gtk_m’u_sh–l_­³nd
+(
+	`GTK_MENU_SHELL
+(
+m’u_áp
+),
+™em_Qu™
+);
+
+619 
+	`g_sigÇl_cÚÃù
+(
+™em_Qu™
+,"aùiv©e",
+	`G_CALLBACK
+(
+de¡roy_widg‘
+),
+maš_wšdow
+);
+
+621 
+m’u_h–p
+ = 
+	`gtk_m’u_Ãw
+();
+
+622 
+	`gtk_widg‘_show
+(
+m’u_h–p
+);
+
+624 
+™em_H–p
+ = (
+GtkWidg‘
+*)
+	`gtk_m’u_™em_Ãw_w™h_Ïb–
+(
+	`_
+("Help"));
+
+625 
+	`gtk_widg‘_show
+(
+™em_H–p
+);
+
+627 
+™em_About
+ = (
+GtkWidg‘
+*)
+	`gtk_m’u_™em_Ãw_w™h_Ïb–
+(
+	`_
+("about"));
+
+628 
+	`gtk_widg‘_show
+(
+™em_About
+);
+
+630 
+	`gtk_m’u_sh–l_­³nd
+(
+	`GTK_MENU_SHELL
+(
+m’u_b¬
+),
+™em_H–p
+);
+
+631 
+	`gtk_m’u_™em_£t_subm’u
+(
+	`GTK_MENU_ITEM
+(
+™em_H–p
+),
+m’u_h–p
+);
+
+632 
+	`gtk_m’u_sh–l_­³nd
+(
+	`GTK_MENU_SHELL
+(
+m’u_h–p
+),
+™em_About
+);
+
+637 
+GtkEÁryBufãr
+ *
+’Œy_bufãr_
+,*
+’Œy_bufãr_pÜt
+,*
+’Œy_bufãr_u£ºame
+;
+
+638 
+gch¬
+ 
+
+[10] = "127.0.0.1";
+
+639 
+gch¬
+ 
+pÜt
+[5] = "21";
+
+640 
+gch¬
+ 
+u£ºame
+[20]="anonymous";
+
+641 
+’Œy_bufãr_
+ = 
+	`gtk_’Œy_bufãr_Ãw
+(
+	`_
+(
+
+),(ip));
+
+642 
+’Œy_bufãr_pÜt
+ = 
+	`gtk_’Œy_bufãr_Ãw
+(
+	`_
+(
+pÜt
+),(port));
+
+643 
+’Œy_bufãr_u£ºame
+ = 
+	`gtk_’Œy_bufãr_Ãw
+(
+	`_
+(
+u£ºame
+),(username));
+
+645 
+hbox_logš
+ = 
+	`gtk_hbox_Ãw
+(
+FALSE
+,0);
+
+646 
+	`gtk_widg‘_show
+(
+hbox_logš
+);
+
+647 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_maš
+,
+hbox_logš
+,
+FALSE
+,FALSE,0);
+
+649 
+Ïb–_IP
+ = 
+	`gtk_Ïb–_Ãw
+(
+	`_
+("IP:"));
+
+650 
+	`gtk_widg‘_show
+(
+Ïb–_IP
+);
+
+651 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+Ïb–_IP
+,
+FALSE
+,FALSE,0);
+
+653 
+’Œy_IP
+ = 
+	`gtk_’Œy_Ãw_w™h_bufãr
+(
+’Œy_bufãr_
+);
+
+654 
+	`gtk_widg‘_show
+(
+’Œy_IP
+);
+
+655 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+’Œy_IP
+,
+TRUE
+,TRUE,0);
+
+657 
+Ïb–_PORT
+ = 
+	`gtk_Ïb–_Ãw
+(
+	`_
+(" PORT:"));
+
+658 
+	`gtk_widg‘_show
+(
+Ïb–_PORT
+);
+
+659 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+Ïb–_PORT
+,
+FALSE
+,FALSE,0);
+
+661 
+’Œy_PORT
+ = 
+	`gtk_’Œy_Ãw_w™h_bufãr
+(
+’Œy_bufãr_pÜt
+);
+
+662 
+	`gtk_widg‘_show
+(
+’Œy_PORT
+);
+
+663 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+’Œy_PORT
+,
+TRUE
+,TRUE,0);
+
+666 
+Ïb–_u£ºame
+ = 
+	`gtk_Ïb–_Ãw
+(
+	`_
+(" USER NAME:"));
+
+667 
+	`gtk_widg‘_show
+(
+Ïb–_u£ºame
+);
+
+668 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+Ïb–_u£ºame
+,
+FALSE
+,FALSE,0);
+
+670 
+’Œy_u£ºame
+ = 
+	`gtk_’Œy_Ãw_w™h_bufãr
+(
+’Œy_bufãr_u£ºame
+);
+
+671 
+	`gtk_widg‘_show
+(
+’Œy_u£ºame
+);
+
+672 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+’Œy_u£ºame
+,
+TRUE
+,TRUE,0);
+
+674 
+Ïb–_PASSWD
+ = 
+	`gtk_Ïb–_Ãw
+(
+	`_
+(" PASSWD"));
+
+675 
+	`gtk_widg‘_show
+(
+Ïb–_PASSWD
+);
+
+676 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+Ïb–_PASSWD
+,
+FALSE
+,FALSE,0);
+
+678 
+’Œy_PASSWD
+ = 
+	`gtk_’Œy_Ãw
+();
+
+679 
+	`gtk_widg‘_show
+(
+’Œy_PASSWD
+);
+
+680 
+	`gtk_’Œy_£t_visib™y
+((
+GtkEÁry
+*)
+’Œy_PASSWD
+,
+FALSE
+);
+
+681 
+	`gtk_’Œy_£t_švisibË_ch¬
+((
+GtkEÁry
+*)
+’Œy_PASSWD
+,'*');
+
+682 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+’Œy_PASSWD
+,
+TRUE
+,TRUE,0);
+
+684 
+bu‰Ú_logš
+ = 
+	`gtk_bu‰Ú_Ãw
+();
+
+685 
+	`gtk_widg‘_show
+(
+bu‰Ú_logš
+);
+
+686 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+bu‰Ú_logš
+,
+FALSE
+,FALSE,0);
+
+687 
+	`g_sigÇl_cÚÃù
+(
+	`G_OBJECT
+(
+bu‰Ú_logš
+),"şicked",
+	`G_CALLBACK
+(
+»¥Ú£_bu‰Ú_logš_down
+),
+NULL
+);
+
+689 
+image_logš
+ = 
+	`gtk_image_Ãw
+();
+
+690 
+	`gtk_image_£t_äom_¡ock
+(
+	`GTK_IMAGE
+(
+image_logš
+),
+GTK_STOCK_OK
+,
+GTK_ICON_SIZE_DND
+);
+
+691 
+	`gtk_widg‘_show
+(
+image_logš
+);
+
+692 
+	`gtk_cÚš”_add
+(
+	`GTK_CONTAINER
+(
+bu‰Ú_logš
+),
+image_logš
+);
+
+695 
+bu‰Ú_abÜt
+ = 
+	`gtk_bu‰Ú_Ãw
+();
+
+696 
+	`gtk_widg‘_show
+(
+bu‰Ú_abÜt
+);
+
+697 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+bu‰Ú_abÜt
+,
+FALSE
+,FALSE,0);
+
+698 
+	`g_sigÇl_cÚÃù
+(
+	`G_OBJECT
+(
+bu‰Ú_abÜt
+),"şicked",
+	`G_CALLBACK
+(
+»¥Ú£_bu‰Ú_abÜt_down
+),
+NULL
+);
+
+700 
+image_abÜt
+ = 
+	`gtk_image_Ãw
+();
+
+701 
+	`gtk_image_£t_äom_¡ock
+(
+	`GTK_IMAGE
+(
+image_abÜt
+),
+GTK_STOCK_CANCEL
+,
+GTK_ICON_SIZE_DND
+);
+
+702 
+	`gtk_widg‘_show
+(
+image_abÜt
+);
+
+703 
+	`gtk_cÚš”_add
+(
+	`GTK_CONTAINER
+(
+bu‰Ú_abÜt
+),
+image_abÜt
+);
+
+705 
+vbox_¿dio_bu‰Ú
+ = 
+	`gtk_vbox_Ãw
+(
+FALSE
+,0);
+
+706 
+	`gtk_widg‘_show
+(
+vbox_¿dio_bu‰Ú
+);
+
+707 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_logš
+,
+vbox_¿dio_bu‰Ú
+,
+TRUE
+,TRUE,0);
+
+709 
+¿dio_bu‰Ú_pÜt
+ = 
+	`gtk_¿dio_bu‰Ú_Ãw_w™h_Ïb–
+(
+NULL
+,
+	`_
+("PORT"));
+
+710 
+	`gtk_widg‘_show
+(
+¿dio_bu‰Ú_pÜt
+);
+
+711 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_¿dio_bu‰Ú
+,
+¿dio_bu‰Ú_pÜt
+,
+TRUE
+,TRUE,0);
+
+712 
+	`g_sigÇl_cÚÃù
+(
+	`G_OBJECT
+(
+¿dio_bu‰Ú_pÜt
+),"toggËd",
+	`G_CALLBACK
+(
+»¥Ú£_¿dio_bu‰Ú
+),(
+gpoš‹r
+)1);
+
+714 
+¿dio_bu‰Ú_·ssive
+ = 
+	`gtk_¿dio_bu‰Ú_Ãw_w™h_Ïb–
+(
+	`gtk_¿dio_bu‰Ú_g‘_group
+(
+	`GTK_RADIO_BUTTON
+(
+¿dio_bu‰Ú_pÜt
+)),
+
+715 
+	`_
+("PASSIVE"));
+
+716 
+	`gtk_widg‘_show
+(
+¿dio_bu‰Ú_·ssive
+);
+
+717 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_¿dio_bu‰Ú
+,
+¿dio_bu‰Ú_·ssive
+,
+TRUE
+,TRUE,0);
+
+718 
+	`g_sigÇl_cÚÃù
+(
+	`G_OBJECT
+(
+¿dio_bu‰Ú_pÜt
+),"toggËd",
+	`G_CALLBACK
+(
+»¥Ú£_¿dio_bu‰Ú
+),(
+gpoš‹r
+)2);
+
+722 
+hbox_f–i¡
+ = 
+	`gtk_hbox_Ãw
+(
+FALSE
+,0);
+
+723 
+	`gtk_widg‘_show
+(
+hbox_f–i¡
+);
+
+724 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_maš
+,
+hbox_f–i¡
+,
+TRUE
+,TRUE,0);
+
+725 
+	`gtk_widg‘_£t_usize
+(
+hbox_f–i¡
+,1200,250);
+
+727 
+vbox_loÿÎi¡
+ = 
+	`gtk_vbox_Ãw
+(
+FALSE
+,0);
+
+728 
+	`gtk_widg‘_show
+(
+vbox_loÿÎi¡
+);
+
+729 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_f–i¡
+,
+vbox_loÿÎi¡
+,
+FALSE
+,FALSE,0);
+
+732 if(
+	`g‘cwd
+(
+cu¼’t_dœ
+,
+MAXPATHLEN
+è=ğ
+NULL
+)
+
+734 
+	`ex™
+(0);
+
+736 
+Ën
+ = 
+	`¡¾’
+(
+cu¼’t_dœ
+);
+
+737 
+’Œy_buf_cw
+ = (
+GtkWidg‘
+*)
+	`gtk_’Œy_bufãr_Ãw
+(
+cu¼’t_dœ
+,
+Ën
+);
+
+739 
+’Œy_loÿlwd
+ = 
+	`gtk_’Œy_Ãw_w™h_bufãr
+((
+GtkEÁryBufãr
+*)
+’Œy_buf_cw
+);
+
+740 
+	`gtk_widg‘_show
+(
+’Œy_loÿlwd
+);
+
+741 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_loÿÎi¡
+,
+’Œy_loÿlwd
+,
+FALSE
+,FALSE,0);
+
+743 
+sw_loÿÎi¡
+ = 
+	`gtk_süŞËd_wšdow_Ãw
+(
+NULL
+,NULL);
+
+744 
+	`gtk_widg‘_show
+(
+sw_loÿÎi¡
+);
+
+745 
+	`gtk_süŞËd_wšdow_£t_shadow_ty³
+(
+	`GTK_SCROLLED_WINDOW
+(
+sw_loÿÎi¡
+),
+GTK_SHADOW_ETCHED_IN
+);
+
+746 
+	`gtk_süŞËd_wšdow_£t_pŞicy
+(
+	`GTK_SCROLLED_WINDOW
+(
+sw_loÿÎi¡
+),
+GTK_POLICY_NEVER
+,
+GTK_POLICY_AUTOMATIC
+);
+
+747 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_loÿÎi¡
+,
+sw_loÿÎi¡
+,
+TRUE
+,TRUE,0);
+
+750 if(
+	`wr™e_loÿÎi¡
+(
+cu¼’t_dœ
+,&
+loÿl_fe
+è=ğ
+FALSE
+)
+
+752 
+	`ex™
+(0);
+
+754 
+mod–
+ = 
+	`ü—‹_li¡_mod–
+(
+loÿl_fe
+,
+sum_fes
+);
+
+755 
+Œ“v›w_loÿl
+ = 
+	`gtk_Œ“_v›w_Ãw_w™h_mod–
+(
+mod–
+);
+
+756 
+	`gtk_widg‘_show
+(
+Œ“v›w_loÿl
+);
+
+757 
+	`gtk_Œ“_v›w_£t_ruËs_hšt
+(
+	`GTK_TREE_VIEW
+(
+Œ“v›w_loÿl
+),
+TRUE
+);
+
+758 
+	`gtk_Œ“_v›w_£t_£¬ch_cŞumn
+(
+	`GTK_TREE_VIEW
+(
+Œ“v›w_loÿl
+),
+NUM_COLUMNS
+);
+
+759 
+	`gtk_cÚš”_add
+(
+	`GTK_CONTAINER
+(
+sw_loÿÎi¡
+),
+Œ“v›w_loÿl
+);
+
+760 
+	`add_cŞumns
+(
+	`GTK_TREE_VIEW
+(
+Œ“v›w_loÿl
+));
+
+761 
+	`g_objeù_uÄef
+(
+mod–
+);
+
+762 
+	`g_sigÇl_cÚÃù
+(
+’Œy_loÿlwd
+,"aùiv©e",
+	`G_CALLBACK
+(
+»¥Ú£_’Œy_’‹r
+),
+NULL
+);
+
+765 
+vbox_»mÙ–i¡
+ = 
+	`gtk_vbox_Ãw
+(
+FALSE
+,0);
+
+766 
+	`gtk_widg‘_show
+(
+vbox_»mÙ–i¡
+);
+
+767 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_f–i¡
+,
+vbox_»mÙ–i¡
+,
+TRUE
+,TRUE,0);
+
+769 
+’Œy_bufãr_£rv”wd
+ = 
+	`gtk_’Œy_bufãr_Ãw
+(
+NULL
+,-1);
+
+771 
+’Œy_»mÙewd
+ = 
+	`gtk_’Œy_Ãw_w™h_bufãr
+(
+’Œy_bufãr_£rv”wd
+);
+
+772 
+	`gtk_widg‘_show
+(
+’Œy_»mÙewd
+);
+
+773 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_»mÙ–i¡
+,
+’Œy_»mÙewd
+,
+FALSE
+,FALSE,0);
+
+775 
+sw_»mÙ–i¡
+ = 
+	`gtk_süŞËd_wšdow_Ãw
+(
+NULL
+,NULL);
+
+776 
+	`gtk_widg‘_show
+(
+sw_»mÙ–i¡
+);
+
+777 
+	`gtk_süŞËd_wšdow_£t_shadow_ty³
+(
+	`GTK_SCROLLED_WINDOW
+(
+sw_»mÙ–i¡
+),
+GTK_SHADOW_ETCHED_IN
+);
+
+778 
+	`gtk_süŞËd_wšdow_£t_pŞicy
+(
+	`GTK_SCROLLED_WINDOW
+(
+sw_»mÙ–i¡
+),
+GTK_POLICY_NEVER
+,
+GTK_POLICY_AUTOMATIC
+);
+
+779 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_»mÙ–i¡
+,
+sw_»mÙ–i¡
+,
+TRUE
+,TRUE,0);
+
+781 
+mod–
+ = 
+	`ü—‹_li¡_mod–
+(
+»mÙe_fe
+,
+»mÙe_f’um
+);
+
+782 
+Œ“v›w_»mÙe
+ = 
+	`gtk_Œ“_v›w_Ãw
+();
+
+783 
+	`gtk_widg‘_show
+(
+Œ“v›w_»mÙe
+);
+
+784 
+	`gtk_Œ“_v›w_£t_ruËs_hšt
+(
+	`GTK_TREE_VIEW
+(
+Œ“v›w_»mÙe
+),
+TRUE
+);
+
+785 
+	`gtk_Œ“_v›w_£t_£¬ch_cŞumn
+(
+	`GTK_TREE_VIEW
+(
+Œ“v›w_»mÙe
+),
+NUM_COLUMNS
+);
+
+786 
+	`gtk_cÚš”_add
+(
+	`GTK_CONTAINER
+(
+sw_»mÙ–i¡
+),
+Œ“v›w_»mÙe
+);
+
+787 
+	`add_cŞumns
+(
+	`GTK_TREE_VIEW
+(
+Œ“v›w_»mÙe
+));
+
+788 
+	`g_objeù_uÄef
+(
+mod–
+);
+
+793 
+hbox_scheduË
+ = 
+	`gtk_hbox_Ãw
+(
+FALSE
+,0);
+
+794 
+	`gtk_widg‘_show
+(
+hbox_scheduË
+);
+
+795 
+	`gtk_widg‘_£t_usize
+(
+hbox_scheduË
+,1200,50);
+
+796 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_maš
+,
+hbox_scheduË
+,
+TRUE
+,TRUE,0);
+
+799 
+hbox_š‹¼aù
+ = 
+	`gtk_hbox_Ãw
+(
+FALSE
+,0);
+
+800 
+	`gtk_widg‘_show
+(
+hbox_š‹¼aù
+);
+
+801 
+	`gtk_widg‘_£t_usize
+(
+hbox_š‹¼aù
+,1200,300);
+
+802 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+vbox_maš
+,
+hbox_š‹¼aù
+,
+TRUE
+,TRUE,0);
+
+804 
+sw_š‹¼aù
+ = 
+	`gtk_süŞËd_wšdow_Ãw
+(
+NULL
+,NULL);
+
+805 
+	`gtk_widg‘_show
+(
+sw_š‹¼aù
+);
+
+807 
+	`gtk_süŞËd_wšdow_£t_shadow_ty³
+(
+	`GTK_SCROLLED_WINDOW
+(
+sw_š‹¼aù
+),
+GTK_SHADOW_ETCHED_IN
+);
+
+808 
+	`gtk_süŞËd_wšdow_£t_pŞicy
+(
+	`GTK_SCROLLED_WINDOW
+(
+sw_š‹¼aù
+),
+GTK_POLICY_NEVER
+,
+GTK_POLICY_AUTOMATIC
+);
+
+809 
+	`gtk_cÚš”_£t_bÜd”_width
+(
+	`GTK_CONTAINER
+(
+sw_š‹¼aù
+),5);
+
+810 
+	`gtk_süŞËd_wšdow_£t_¶aûm’t
+(
+	`GTK_SCROLLED_WINDOW
+(
+sw_š‹¼aù
+),
+GTK_CORNER_BOTTOM_LEFT
+);
+
+813 
+	`gtk_box_·ck_¡¬t
+((
+GtkBox
+*)
+hbox_š‹¼aù
+,
+sw_š‹¼aù
+,
+TRUE
+,TRUE,0);
+
+815 
+‹xt_v›w_š‹¼aù
+ = 
+	`gtk_‹xt_v›w_Ãw
+();
+
+816 
+	`gtk_widg‘_show
+(
+‹xt_v›w_š‹¼aù
+);
+
+817 
+	`gtk_‹xt_v›w_£t_ed™abË
+((
+GtkTextV›w
+*)
+‹xt_v›w_š‹¼aù
+,
+FALSE
+);
+
+818 
+	`gtk_cÚš”_add
+(
+	`GTK_CONTAINER
+(
+sw_š‹¼aù
+),
+‹xt_v›w_š‹¼aù
+);
+
+821  
+maš_wšdow
+;
+
+822 
+	}
+}
+
+	@ftpclient_UI.h
+
+9 
+	~"defšes.h
+"
+
+10 
+	~"feuts.h
+"
+
+11 
+	~"Œªsãr.h
+"
+
+13 #iâdeà
+__FTPCLIENT_UI_H
+
+
+14 
+	#__FTPCLIENT_UI_H
+
+
+	)
+
+16 #ifdeà
+__ılu¥lus
+
+
+22 
+Fe
+ *
+loÿl_fe
+ = 
+NULL
+;
+
+23 
+Fe
+ *
+»mÙe_fe
+ = 
+NULL
+;
+
+24 
+GtkT»eMod–
+ *
+mod–
+ = 
+NULL
+;
+
+26 
+GtkWidg‘
+ *
+ü—‹_wšdow
+();
+
+29 
+gboŞ—n
+ 
+»¥Ú£_’Œy_’‹r
+(
+GtkWidg‘
+ *
+widg‘
+, 
+GdkEv’t
+ *
+ev’t
+, 
+gpoš‹r
+ 
+d©a
+);
+
+31 
+add_cŞumns
+(
+GtkT»eV›w
+ *
+Œ“v›w
+);
+
+32 
+show_‹xt_Ãws
+(cÚ¡ *
+msg
+);
+
+33 
+gboŞ—n
+ 
+»¥Ú£_bu‰Ú_logš_down
+(
+GtkWidg‘
+ *
+widg‘
+, 
+GdkEv’t
+ *
+ev’t
+, 
+gpoš‹r
+ 
+d©a
+);
+
+34 
+d—l_w™h_”rÜ
+(
+gšt
+ 
+æag
+);
+
+35 
+gboŞ—n
+ 
+£nd_ªd_»¥Ú£
+(
+sock
+,*
+commªd
+, cÚ¡ *
+ok_¡r
+, *
+»¶y
+, 
+Ën
+);
+
+36 
+»¥Ú£_¿dio_bu‰Ú
+(
+GtkWidg‘
+ *
+widg‘
+, 
+gpoš‹r
+ 
+d©a
+);
+
+37 * 
+make_d©a_cÚÃùiÚ
+(*
+¬g
+);
+
+38 
+gboŞ—n
+ 
+»¥Ú£_bu‰Ú_abÜt_down
+(
+GtkWidg‘
+ *
+widg‘
+, 
+gpoš‹r
+ 
+d©a
+);
+
+39 
+g‘_»mÙe_šfo
+();
+
+41 #ifdeà
+__ılu¥lus
+
+
+	@main.c
+
+10 
+	~"ápş›Á_UI.h
+"
+
+13 
+	$maš
+(
+¬gc
+, *
+¬gv
+[])
+
+15 #ifdeà
+G_THREAD_ENABLE
+
+
+16 if(!
+	`g_th»ad_suµÜ‹d
+())
+
+18 
+	`g_th»ad_š™
+(
+NULL
+);
+
+19 
+	`gdk_th»ads_š™
+();
+
+23 
+	`gtk_š™
+(&
+¬gc
+, &
+¬gv
+);
+
+24 
+GtkWidg‘
+ *
+maš_wšdow
+ = 
+	`ü—‹_wšdow
+();
+
+25 
+	`gtk_widg‘_show
+(
+maš_wšdow
+);
+
+27 
+	`gdk_th»ads_’‹r
+();
+
+28 
+	`gtk_maš
+();
+
+29 
+	`gdk_th»ads_Ëave
+();
+
+32 
+	}
+}
+
+	@transfer.c
+
+9 
+	~"Œªsãr.h
+"
+
+11 
+fe_buf
+ *
+	gfebuf_h—d
+ = 
+NULL
+;
+
+12 
+fe_buf
+ *
+	gfebuf_
+ = 
+NULL
+;
+
+13 
+gšt
+ 
+	g»mÙe_f’um
+ = 0;
+
+18 
+	$make_£rv”_cÚÃùiÚ
+(cÚ¡ 
+gch¬
+ *
+ho¡
+, cÚ¡ gch¬ *
+£rviû
+,
+n£c
+)
+
+20 
+ho¡’t
+ *
+phe
+;
+
+21 
+£rv’t
+ *
+p£
+;
+
+22 
+sockaddr_š
+ 
+sš
+;
+
+23 
+s
+;
+
+25 
+	`mem£t
+(&
+sš
+,0,(sin));
+
+26 
+sš
+.
+sš_çmy
+ = 
+PF_INET
+;
+
+28 if(
+p£
+ = 
+	`g‘£rvbyÇme
+(
+£rviû
+,"tcp"))
+
+30 
+sš
+.
+sš_pÜt
+ = 
+p£
+->
+s_pÜt
+;
+
+32 if((
+sš
+.
+sš_pÜt
+ = 
+	`htÚs
+(()
+	`©oi
+(
+£rviû
+))) == 0)
+
+37 if(
+phe
+ = 
+	`g‘ho¡byÇme
+(
+ho¡
+))
+
+39 
+	`memıy
+(&
+sš
+.
+sš_addr
+, 
+phe
+->
+h_addr
+,…he->
+h_Ëngth
+);
+
+41 if((
+sš
+.
+sš_addr
+.
+s_addr
+ = 
+	`š‘_addr
+(
+ho¡
+)è=ğ
+INADDR_NONE
+)
+
+46 
+s
+ = 
+	`sock‘
+(
+PF_INET
+,
+SOCK_STREAM
+,0);
+
+47 if(
+s
+<0)
+
+52 
+timev®
+ 
+tm
+;
+
+53 
+fd_£t
+ 
+£t
+;
+
+54 
+ul
+ = 1;
+
+56 
+	`ioùl
+(
+s
+,
+FIONBIO
+,&
+ul
+);
+
+58 
+gboŞ—n
+ 
+»t
+ = 
+FALSE
+;
+
+59 
+”rÜ
+ = -1;
+
+60 
+Ën
+ = ();
+
+62 if(
+	`cÚÃù
+(
+s
+,(
+sockaddr
+*)&
+sš
+,(sin)) == -1)
+
+64 
+tm
+.
+tv_£c
+ = 
+TIME_OUT_SEC
+;
+
+65 
+tm
+.
+tv_u£c
+ = 0;
+
+66 
+	`FD_ZERO
+(&
+£t
+);
+
+67 
+	`FD_SET
+(
+s
+,&
+£t
+);
+
+68 
+»suÉ
+;
+
+69 
+»suÉ
+ =
+	`£Ëù
+(
+s
++1,
+NULL
+,&
+£t
+,NULL,(
+timev®
+*)&
+tm
+);
+
+70 if(
+»suÉ
+ > 0)
+
+72 
+	`g‘sockİt
+(
+s
+,
+SOL_SOCKET
+,
+SO_ERROR
+,&
+”rÜ
+,(
+sockËn_t
+*)&
+Ën
+);
+
+73 if(
+”rÜ
+ == 0)
+
+75 
+	`´štf
+("connect success\n");
+
+76 
+»t
+ = 
+TRUE
+;
+
+78 
+»t
+ = 
+FALSE
+;
+
+80 
+»t
+ = 
+FALSE
+;
+
+82 
+»t
+ = 
+TRUE
+;
+
+84 
+ul
+ = 0;
+
+85 
+	`ioùl
+(
+s
+,
+FIONBIO
+,&
+ul
+);
+
+87 if(
+»t
+ =ğ
+FALSE
+)
+
+89 
+	`şo£
+(
+s
+);
+
+92  
+s
+;
+
+93 
+	}
+}
+
+96 
+gboŞ—n
+ 
+	$£nd_commªd_to_£rv”
+(
+sock
+, cÚ¡ *
+commªd
+)
+
+98 
+Ën
+;
+
+99 if((
+Ën
+ = 
+	`£nd
+(
+sock
+,
+commªd
+,
+	`¡¾’
+(command),0)) < 0)
+
+101  
+FALSE
+;
+
+103  
+TRUE
+;
+
+104 
+	}
+}
+
+107 
+gboŞ—n
+ 
+	$g‘_»¶y_äom_£rv”
+(
+sock
+, *
+»suÉ
+)
+
+109 
+	`mem£t
+(
+»suÉ
+,0,(result));
+
+110 
+buf
+[
+READBUFSIZE
+];
+
+111 if(
+	`»cv
+(
+sock
+, 
+buf
+, (buf), 0)<0)
+
+113  
+FALSE
+;
+
+115 
+	`£t_d©a
+(
+buf
+,
+»suÉ
+);
+
+116  
+TRUE
+;
+
+117 
+	}
+}
+
+120 
+gboŞ—n
+ 
+	$commªd_is_ok
+(cÚ¡ * 
+ok_¡r
+, cÚ¡ *
+»suÉ
+)
+
+122 if(
+	`¡ºcmp
+(
+ok_¡r
+,
+»suÉ
+,(ok_str)-1) == 0)
+
+124  
+TRUE
+;
+
+126  
+FALSE
+;
+
+127 
+	}
+}
+
+131 
+gšt
+ 
+	$cÚŒŞ_cÚÃùiÚ_İ”©iÚ
+(
+sock
+, *
+commªd
+, *
+»¶y
+, cÚ¡ *
+ok_¡r
+)
+
+133 
+gboŞ—n
+ 
+æag
+;
+
+134 
+	`mem£t
+(
+»¶y
+,0,
+	`¡¾’
+(reply));
+
+135 
+æag
+ = 
+	`£nd_commªd_to_£rv”
+(
+sock
+, 
+commªd
+);
+
+136 if(!
+æag
+)
+
+141 
+æag
+ = 
+	`g‘_»¶y_äom_£rv”
+(
+sock
+, 
+»¶y
+);
+
+142 if(!
+æag
+)
+
+147 
+æag
+ = 
+	`commªd_is_ok
+(
+ok_¡r
+, 
+»¶y
+);
+
+148 if(!
+æag
+)
+
+152 
+	`mem£t
+(
+commªd
+,0,(command));
+
+154 
+	}
+}
+
+157 
+	$£t_d©a
+(*
+¤c
+, *
+de¡
+)
+
+159 
+i
+ =0;
+
+160 
+g
+ =0;
+
+161 
+gboŞ—n
+ 
+hasbegun
+ = 
+FALSE
+;
+
+162 ;;
+i
+++)
+
+164 if(
+hasbegun
+ =ğ
+TRUE
+)
+
+166 
+de¡
+[
+g
+] = 
+¤c
+[
+i
+];
+
+167 if(
+¤c
+[
+i
+] == '\0' ||src[i] == '\r' || src[i] == '\n')
+
+171 
+g
+++;
+
+175 if(
+¤c
+[
+i
+] == ' ' || src[i] ==' ')
+
+179 
+de¡
+[0] = 
+¤c
+[
+i
+];
+
+180 
+hasbegun
+ = 
+TRUE
+;
+
+181 
+g
+ = 1;
+
+186 
+de¡
+[
+g
+] = '\0';
+
+187 
+	}
+}
+
+191 
+gšt
+ 
+	$pÜt_Œªsãr_bšd
+(
+sockaddr_š
+ *
+pÜt_£rv”_sš
+,cÚ¡ *
+
+)
+
+194 
+ş›addr_Ën
+;
+
+195 
+£rvaddr_Ën
+;
+
+196 
+ho¡’t
+ *
+phe
+;
+
+197 
+sockËn_t
+ 
+£rv”_Ën
+;
+
+198 
+Ën
+ = 0;
+
+200 
+pÜt_£rv”_sš
+->
+sš_çmy
+ = 
+PF_INET
+;
+
+206 if((
+pÜt_£rv”_sš
+->
+sš_addr
+.
+s_addr
+ = 
+	`š‘_addr
+(
+
+)è=ğ
+INADDR_NONE
+)
+
+212 
+pÜt_£rv”_sš
+->
+sš_pÜt
+ = 
+	`htÚs
+(0);
+
+213 
+£rvaddr_Ën
+ = (
+pÜt_£rv”_sš
+);
+
+214 
+pÜt_li¡’_sock
+ = 
+	`sock‘
+(
+PF_INET
+,
+SOCK_STREAM
+,
+IPPROTO_TCP
+);
+
+215 if(
+pÜt_li¡’_sock
+ < 0)
+
+220 
+æag
+ = 1;
+
+221 
+	`£tsockİt
+(
+pÜt_li¡’_sock
+,
+SOL_SOCKET
+,
+SO_REUSEADDR
+,(*)&
+æag
+,());
+
+222 
+	`£tsockİt
+(
+pÜt_li¡’_sock
+,
+IPPROTO_TCP
+,1,(*)&
+æag
+,());
+
+224 
+£rv”_Ën
+ = (*
+pÜt_£rv”_sš
+);
+
+226 if(
+	`bšd
+(
+pÜt_li¡’_sock
+,(
+sockaddr
+*)
+pÜt_£rv”_sš
+,
+£rv”_Ën
+)<0)
+
+228 
+	`³¼Ü
+("bindƒrror:\n");
+
+232 if(
+	`li¡’
+(
+pÜt_li¡’_sock
+,1)<0)
+
+234 
+	`´štf
+("listenƒrror\n");
+
+238 
+	}
+}
+
+241 
+gšt
+ 
+	$g‘_»mÙe_f–i¡
+(
+d©a_fd
+)
+
+243 
+gšt
+ 
+Ën
+;
+
+244 
+fe_buf
+ *
+febuf_Ãw
+;
+
+245 
+buf
+[300];
+
+247 if(
+febuf_h—d
+ !ğ
+NULL
+)
+
+249 
+	`ä“_»mÙe_f–i¡
+(&
+febuf_h—d
+);
+
+252 
+febuf_h—d
+ = 
+	`m®loc
+((
+fe_buf
+));
+
+253 if(
+febuf_h—d
+ =ğ
+NULL
+)
+
+257 
+febuf_
+ = 
+febuf_h—d
+;
+
+260 
+Ën
+ = 
+	`»cv
+(
+d©a_fd
+,
+buf
+,
+	`¡¾’
+(buf),0);
+
+261 if(
+Ën
+ < 0)
+
+263 
+	`³¼Ü
+("recv:");
+
+268 if(
+Ën
+ == 0)
+
+273 if(
+Ën
+ > 0)
+
+275 
+febuf_Ãw
+ = 
+	`m®loc
+((
+fe_buf
+));
+
+276 if(
+febuf_Ãw
+ =ğ
+NULL
+)
+
+280 
+	`¡rcmp
+(
+febuf_Ãw
+->
+fe_d©a
+,
+buf
+);
+
+281 
+febuf_Ãw
+->
+Ãxt
+ = 
+NULL
+;
+
+282 if(
+febuf_h—d
+ =ğ
+febuf_
+)
+
+284 
+febuf_
+ = 
+febuf_Ãw
+;
+
+285 
+febuf_h—d
+->
+Ãxt
+ = 
+febuf_Ãw
+;
+
+289 
+febuf_
+->
+Ãxt
+ = 
+febuf_Ãw
+;
+
+290 
+febuf_
+ = 
+febuf_Ãw
+;
+
+292 
+»mÙe_f’um
+++;
+
+296 
+	}
+}
+
+300 
+	$ä“_»mÙe_f–i¡
+(
+fe_buf
+ **
+h—d
+)
+
+302 
+fe_buf
+ *
+‹mp
+;
+
+303 
+‹mp
+ = (*
+h—d
+)->
+Ãxt
+;
+
+304 
+‹mp
+ !ğ
+NULL
+)
+
+306 
+	`ä“
+(*
+h—d
+);
+
+307 *
+h—d
+ = 
+‹mp
+;
+
+308 
+‹mp
+ =emp->
+Ãxt
+;
+
+310 
+	`ä“
+(*
+h—d
+);
+
+312 *
+h—d
+ = 
+NULL
+;
+
+313 
+	}
+}
+
+	@transfer.h
+
+9 
+	~"defšes.h
+"
+
+10 #iâdeà
+__TRANSFER_H
+
+
+11 
+	#__TRANSFER_H
+
+
+	)
+
+13 #ifdeà
+__ılu¥lus
+
+
+18 
+make_£rv”_cÚÃùiÚ
+(cÚ¡ 
+gch¬
+ *
+ho¡
+, cÚ¡ gch¬ *
+£rviû
+,
+n£c
+);
+
+19 
+gboŞ—n
+ 
+£nd_commªd_to_£rv”
+(
+sock
+, cÚ¡ *
+commªd
+);
+
+20 
+gboŞ—n
+ 
+g‘_»¶y_äom_£rv”
+(
+sock
+, *
+»suÉ
+);
+
+21 
+gboŞ—n
+ 
+commªd_is_ok
+(cÚ¡ * 
+ok_¡r
+, cÚ¡ *
+»suÉ
+);
+
+22 
+gšt
+ 
+cÚŒŞ_cÚÃùiÚ_İ”©iÚ
+(
+sock
+, *
+commªd
+, *
+»¶y
+, cÚ¡ *
+ok_¡r
+);
+
+23 
+£t_d©a
+(*
+¤c
+, *
+de¡
+);
+
+24 
+gšt
+ 
+pÜt_Œªsãr_bšd
+(
+sockaddr_š
+ *
+pÜt_£rv”_sš
+,cÚ¡ *
+
+);
+
+25 
+gšt
+ 
+g‘_»mÙe_f–i¡
+(
+d©a_fd
+);
+
+26 
+ä“_»mÙe_f–i¡
+(
+fe_buf
+ **
+h—d
+);
+
+29 #ifdeà
+__ılu¥lus
+
+
+	@
+1
+.
+0
+9
+130
+In file included from ftpclient_UI.h
+defines.h
+fileutils.c
+fileutils.h
+ftpclient_UI.c
+ftpclient_UI.h
+main.c
+transfer.c
+transfer.h

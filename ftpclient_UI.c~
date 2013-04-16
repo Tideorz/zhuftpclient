@@ -1,0 +1,258 @@
+/* Copyright (c)  2013 3.16*
+ * zhuhaichao
+ * 
+ * file: ftpclient_UI.c
+ *
+ * description:define functions about the
+ * gtk-UI 
+ */
+
+#include "ftpclient_UI.h"
+
+/*close the window ,later I will create a dialoag for the user to choose whether
+ * to close the ftp-client*/
+gint delete_event_top_window(GtkWidget *widget, GdkEvent *event, gpointer data)
+{
+	return FALSE;
+}
+
+/*destroy the widget ,kill the process*/
+void destroy(GtkWidget *widget, gpointer data)
+{
+	gtk_main_quit();
+}
+
+/*you can add a dialog latter*/
+void destroy_widget(GtkWidget *widget, gpointer data)
+{
+	GtkWidget *de_widget = (GtkWidget*) data;
+	gtk_widget_destroy(de_widget);
+}
+
+/*create a list store model to show the local file or directory status*/
+static GtkTreeModel *create_locallist_model(void)
+{
+	gint  i;
+	GtkTreeIter iter;
+	GtkListStore *store;
+	store = gtk_list_store_new(NUM_COLUMNS,
+				   G_TYPE_STRING,
+				   G_TYPE_UINT,
+				   G_TYPE_STRING,
+				   G_TYPE_STRING,
+				   G_TYPE_STRING,
+				   G_TYPE_STRING
+			);
+//	for(i=0; i<G_N_ELEMENTS(data); i++)
+//	{
+//		gtk_list_store_append(store,&iter);
+//		gtk_list_store_set(store,&iter,
+//				   G_TYPE_STRING, data[i].file_name
+//				   G_TYPE_UINT, data[i].file_size
+//				   G_TYPE_STRING, data[i].own_name
+//				   G_TYPE_STRING, data[i].group_name
+//				   G_TYPE_STRING, data[i].date
+//				   G_TYPE_STRING data[i].file_state
+//	}
+	return GTK_TREE_MODEL(store);
+
+}
+
+
+
+/*create the UI window layout*/
+GtkWidget *create_window(void)
+{
+	/*main window of the ftp-client*/
+	GtkWidget *main_window;
+
+	/*vbox of the main_window*/
+	GtkWidget *vbox_main;
+	
+	/*menu*/
+	GtkWidget *hbox_menu;
+	GtkWidget *menu_bar;
+	GtkWidget *menu_ftp;
+	GtkWidget *item_FTP;
+	GtkWidget *item_Quit;
+
+	GtkWidget *menu_help;
+	GtkWidget *item_Help;
+	GtkWidget *item_About;
+
+	/*login*/
+	GtkWidget *hbox_login;
+	GtkWidget *label_IP;
+	GtkWidget *entry_IP;
+	GtkWidget *label_PORT;
+	GtkWidget *entry_PORT;
+	GtkWidget *label_username;
+	GtkWidget *entry_username;
+	GtkWidget *label_PASSWD;
+	GtkWidget *entry_PASSWD;
+	GtkWidget *button_abort;
+	GtkWidget *image_abort;
+
+	/*file list*/
+	GtkWidget *hbox_filelist;
+	GtkWidget *vbox_locallist;
+	GtkWidget *vbox_remotelist;
+	GtkWidget *entry_localwd;  	/*current absolute path*/
+	GtkWidget *sw_locallist;
+	GtkWidget *ls_locallist;
+	GtkWidget *treeview_local;
+	
+
+	/*file transfer schedule*/
+	GtkWidget *hbox_schedule;
+
+	/*  C/S interract text view */
+	GtkWidget *hbox_interract;
+
+	/*create the main_window*/
+	main_window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+	gtk_widget_set_usize(main_window,1000,800);
+	gtk_window_set_title((GtkWindow*)main_window,"zhuhaichao-ftpclient");
+	gtk_window_set_position((GtkWindow*)main_window,GTK_WIN_POS_CENTER);
+	g_signal_connect(main_window,"delete_event",G_CALLBACK(delete_event_top_window),NULL);
+	g_signal_connect(main_window,"destroy",G_CALLBACK(destroy),NULL);
+
+	/*vbox_main*/
+	vbox_main = gtk_vbox_new(FALSE,0);
+	gtk_widget_show(vbox_main);
+	gtk_container_add((GtkContainer*)main_window,vbox_main);
+
+
+
+	/*create hbox_menu*/
+	hbox_menu = gtk_hbox_new(FALSE,0);
+	gtk_widget_show(hbox_menu);
+	gtk_box_pack_start((GtkBox*)vbox_main,hbox_menu,FALSE,FALSE,0);
+	
+	menu_bar = gtk_menu_bar_new();
+	gtk_widget_show(menu_bar);
+	gtk_box_pack_start((GtkBox*)hbox_menu,menu_bar,TRUE,TRUE,0);
+
+	menu_ftp = gtk_menu_new();
+	gtk_widget_show(menu_ftp);
+
+	item_FTP = (GtkWidget*)gtk_menu_item_new_with_label("FTP");
+	gtk_widget_show(item_FTP);
+
+	item_Quit = (GtkWidget*)gtk_menu_item_new_with_label("Quit");
+	gtk_widget_show(item_Quit);
+
+	gtk_menu_shell_append(GTK_MENU_SHELL(menu_bar),item_FTP);
+	gtk_menu_item_set_submenu(GTK_MENU_ITEM(item_FTP),menu_ftp);
+	gtk_menu_shell_append(GTK_MENU_SHELL(menu_ftp),item_Quit);
+	g_signal_connect(item_Quit,"activate",G_CALLBACK(destroy_widget),main_window);
+
+	menu_help = gtk_menu_new();
+	gtk_widget_show(menu_help);
+
+	item_Help = (GtkWidget*)gtk_menu_item_new_with_label("Help");
+	gtk_widget_show(item_Help);
+
+	item_About = ((GtkWidget*)gtk_menu_item_new_with_label("about"));
+	gtk_widget_show(item_About);
+
+	gtk_menu_shell_append(GTK_MENU_SHELL(menu_bar),item_Help);
+	gtk_menu_item_set_submenu(GTK_MENU_ITEM(item_Help),menu_help);
+	gtk_menu_shell_append(GTK_MENU_SHELL(menu_help),item_About);
+
+
+
+	/*create hbox_login*/
+	hbox_login = gtk_hbox_new(FALSE,0);
+	gtk_widget_show(hbox_login);
+	gtk_box_pack_start((GtkBox*)vbox_main,hbox_login,FALSE,FALSE,0);
+
+	label_IP = gtk_label_new("IP:");
+	gtk_widget_show(label_IP);
+	gtk_box_pack_start((GtkBox*)hbox_login,label_IP,FALSE,FALSE,0);
+
+	entry_IP = gtk_entry_new();
+	gtk_widget_show(entry_IP);
+	gtk_box_pack_start((GtkBox*)hbox_login,entry_IP,TRUE,TRUE,0);
+
+	label_PORT = gtk_label_new("  PORT:");
+	gtk_widget_show(label_PORT);
+	gtk_box_pack_start((GtkBox*)hbox_login,label_PORT,FALSE,FALSE,0);
+
+	entry_PORT = gtk_entry_new();
+	gtk_widget_show(entry_PORT);
+	gtk_box_pack_start((GtkBox*)hbox_login,entry_PORT,TRUE,TRUE,0);
+
+
+	label_username = gtk_label_new("  USER NAME:");
+	gtk_widget_show(label_username);
+	gtk_box_pack_start((GtkBox*)hbox_login,label_username,FALSE,FALSE,0);
+
+	entry_username = gtk_entry_new();
+	gtk_widget_show(entry_username);
+	gtk_box_pack_start((GtkBox*)hbox_login,entry_username,TRUE,TRUE,0);
+
+	label_PASSWD = gtk_label_new("  PASSWD");
+	gtk_widget_show(label_PASSWD);
+	gtk_box_pack_start((GtkBox*)hbox_login,label_PASSWD,FALSE,FALSE,0);
+
+	entry_PASSWD = gtk_entry_new();
+	gtk_widget_show(entry_PASSWD);
+	gtk_entry_set_visibility((GtkEntry*)entry_PASSWD,FALSE);
+	gtk_entry_set_invisible_char((GtkEntry*)entry_PASSWD,'*');
+	gtk_box_pack_start((GtkBox*)hbox_login,entry_PASSWD,TRUE,TRUE,0);
+
+	button_abort = gtk_button_new();
+	gtk_widget_show(button_abort);
+	gtk_widget_set_size_request(button_abort,60,40);
+	gtk_box_pack_start((GtkBox*)hbox_login,button_abort,FALSE,FALSE,0);
+
+	image_abort = gtk_image_new();
+	gtk_image_set_from_stock(GTK_IMAGE(image_abort),GTK_STOCK_CANCEL,GTK_ICON_SIZE_DND);
+	gtk_widget_show(image_abort);
+	gtk_container_add(GTK_CONTAINER(button_abort),image_abort);
+
+	
+	/*create hbox_filelist*/
+	hbox_filelist = gtk_hbox_new(FALSE,0);
+	gtk_widget_show(hbox_filelist);
+	gtk_box_pack_start((GtkBox*)vbox_main,hbox_filelist,TRUE,TRUE,0);
+
+	vbox_locallist = gtk_vbox_new(FALSE,0);
+	gtk_widget_show(vbox_locallist);
+	gtk_box_pack_start((GtkBox*)hbox_filelist,vbox_locallist,TRUE,TRUE,0);
+
+	entry_localwd = gtk_entry_new();
+	gtk_widget_show(entry_localwd);
+	gtk_box_pack_start((GtkBox*)vbox_locallist,entry_localwd,FALSE,FALSE,0);
+
+	sw_locallist = gtk_scrolled_window_new(NULL,NULL);
+	gtk_widget_show(sw_locallist);
+	gtk_scrolled_window_set_shadow_type(GTK_SCROLLED_WINDOW(sw_locallist),GTK_SHADOW_ETCHED_IN);
+	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(sw_locallist),GTK_POLICY_NEVER,GTK_POLICY_AUTOMATIC);
+	gtk_box_pack_start((GtkBox*)vbox_locallist,sw_locallist,TRUE,TRUE,0);
+
+	model = (GtkWidget*)create_locallist_model();
+	gtk_widget_show(ls_locallist);
+
+	model = create_locallist_model();
+	treeview_local = gtk_tree_view_new_with_model(model);
+	gtk_tree_view_set_rules_hint(GTK_TREE_VIEW(treeview_local),TRUE);
+	gtk_tree_view_set_search_column(GTK_TREE_VIEW(treeview_local),NUM_COLUMNS); 
+	gtk_container_add(GTK_CONTAINER(sw_locallist),treeview_local);
+	g_object_unref(model);
+	
+
+
+	/*create hbox_schedule*/
+	hbox_schedule = gtk_hbox_new(FALSE,0);	
+	gtk_widget_show(hbox_schedule);
+	gtk_box_pack_start((GtkBox*)vbox_main,hbox_schedule,TRUE,TRUE,0);
+
+	/*create hbox_interract*/
+	hbox_interract = gtk_hbox_new(FALSE,0);
+	gtk_widget_show(hbox_interract);
+	gtk_box_pack_start((GtkBox*)vbox_main,hbox_interract,TRUE,TRUE,0);
+	
+	return main_window;
+}

@@ -1,0 +1,210 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS=-g  -I.\\$/;"	m
+CMD_LIST	defines.h	63;"	d
+CMD_PASS	defines.h	60;"	d
+CMD_PORT	defines.h	64;"	d
+CMD_PWD	defines.h	62;"	d
+CMD_STOR	defines.h	65;"	d
+CMD_SYST	defines.h	61;"	d
+CMD_USER	defines.h	59;"	d
+COLUMN_DATE	defines.h	/^		COLUMN_DATE,$/;"	e	enum:__anon2
+COLUMN_FILENAME	defines.h	/^		COLUMN_FILENAME,$/;"	e	enum:__anon2
+COLUMN_FILESIZE	defines.h	/^		COLUMN_FILESIZE,$/;"	e	enum:__anon2
+COLUMN_FILESTATE	defines.h	/^		COLUMN_FILESTATE,$/;"	e	enum:__anon2
+COLUMN_GROUPNAME	defines.h	/^		COLUMN_GROUPNAME,$/;"	e	enum:__anon2
+COLUMN_OWNNAME	defines.h	/^		COLUMN_OWNNAME,$/;"	e	enum:__anon2
+DELIM	defines.h	52;"	d
+E_LIST	defines.h	/^		E_LIST,$/;"	e	enum:__anon1
+E_STOR	defines.h	/^		E_STOR$/;"	e	enum:__anon1
+File	defines.h	/^	}File;$/;"	t	typeref:struct:__anon3
+LIBS	Makefile	/^LIBS=-L. `pkg-config --libs gtk+-2.0 glib-2.0 gthread-2.0 `\\$/;"	m
+MAXPATHLEN	defines.h	45;"	d
+MAXUSERLEN	defines.h	46;"	d
+NUM_COLUMNS	defines.h	/^		NUM_COLUMNS$/;"	e	enum:__anon2
+OBJS	Makefile	/^OBJS=main.o ftpclient_UI.o fileutils.o transfer.o$/;"	m
+PROGS	Makefile	/^PROGS = zhuftpclient$/;"	m
+READBUFSIZE	defines.h	48;"	d
+READ_TIME_OUT	defines.h	51;"	d
+SENDBUFSIZE	defines.h	47;"	d
+TIME_OUT_SEC	defines.h	55;"	d
+_	ftpclient_UI.c	/^gchar *_(char *string)$/;"	f	signature:(char *string)
+__DEFINES_H	defines.h	39;"	d
+__FILEUTILS_H	fileutils.h	11;"	d
+__FTPCLIENT_UI_H	ftpclient_UI.h	14;"	d
+__TRANSFER_H	transfer.h	11;"	d
+__anon3::date	defines.h	/^		 gchar *date;$/;"	m	struct:__anon3	access:public
+__anon3::file_name	defines.h	/^		 char *file_name;$/;"	m	struct:__anon3	access:public
+__anon3::file_size	defines.h	/^      	 	 guint file_size;$/;"	m	struct:__anon3	access:public
+__anon3::file_state	defines.h	/^		 gchar *file_state;$/;"	m	struct:__anon3	access:public
+__anon3::group_name	defines.h	/^		 gchar *group_name;$/;"	m	struct:__anon3	access:public
+__anon3::own_name	defines.h	/^		 gchar *own_name;$/;"	m	struct:__anon3	access:public
+__anon4::data_sock	defines.h	/^		int *data_sock;$/;"	m	struct:__anon4	access:public
+__anon4::ip	defines.h	/^		char *ip;$/;"	m	struct:__anon4	access:public
+__anon5::data_sock	ftpclient_UI.c	/^	int data_sock;$/;"	m	struct:__anon5	file:	access:public
+__anon5::fd	ftpclient_UI.c	/^	int fd;$/;"	m	struct:__anon5	file:	access:public
+add_columns	ftpclient_UI.c	/^static void add_columns (GtkTreeView *treeview)$/;"	f	file:	signature:(GtkTreeView *treeview)
+add_columns	ftpclient_UI.h	/^	static void add_columns(GtkTreeView *treeview);$/;"	p	signature:(GtkTreeView *treeview)
+clear_log	ftpclient_UI.c	/^void clear_log()$/;"	f
+command	ftpclient_UI.c	/^char command[SENDBUFSIZE];$/;"	v
+command_is_ok	transfer.c	/^gboolean command_is_ok(const char * ok_str, const char *result)$/;"	f	signature:(const char * ok_str, const char *result)
+command_is_ok	transfer.h	/^	gboolean command_is_ok(const char * ok_str, const char *result);$/;"	p	signature:(const char * ok_str, const char *result)
+command_sock	ftpclient_UI.c	/^int command_sock;$/;"	v
+command_str	ftpclient_UI.c	/^char command_str[SENDBUFSIZE];$/;"	v
+control_connection_operation	transfer.c	/^gint control_connection_operation(int sock, char *command, char *reply, const char *ok_str)$/;"	f	signature:(int sock, char *command, char *reply, const char *ok_str)
+control_connection_operation	transfer.h	/^	gint control_connection_operation(int sock, char *command, char *reply, const char *ok_str);$/;"	p	signature:(int sock, char *command, char *reply, const char *ok_str)
+create_data_sock_with_command	ftpclient_UI.c	/^gboolean create_data_sock_with_command(const char *command, const char *ok_str, int len)$/;"	f	signature:(const char *command, const char *ok_str, int len)
+create_data_sock_with_command	ftpclient_UI.h	/^	gboolean create_data_sock_with_command(const char *command, const char *ok_str, int len);$/;"	p	signature:(const char *command, const char *ok_str, int len)
+create_list_model	ftpclient_UI.c	/^static GtkTreeModel *create_list_model(File *file_data,gint sum_files)$/;"	f	file:	signature:(File *file_data,gint sum_files)
+create_list_model_thread	ftpclient_UI.c	/^void *create_list_model_thread(void *new_model)$/;"	f	signature:(void *new_model)
+create_list_model_thread	ftpclient_UI.h	/^	void *create_list_model_thread(void *new_model);$/;"	p	signature:(void *new_model)
+create_window	ftpclient_UI.c	/^GtkWidget *create_window(void)$/;"	f	signature:(void)
+create_window	ftpclient_UI.h	/^	GtkWidget *create_window(void);$/;"	p	signature:(void)
+current_dir	defines.h	/^	char current_dir[MAXPATHLEN];$/;"	v
+data_connection_method	ftpclient_UI.c	/^gint data_connection_method = 1;$/;"	v
+data_sock	defines.h	/^		int *data_sock;$/;"	m	struct:__anon4	access:public
+data_sock	ftpclient_UI.c	/^	int data_sock;$/;"	m	struct:__anon5	file:	access:public
+data_sock	ftpclient_UI.c	/^int data_sock = -1;$/;"	v
+data_transfer_with_server	ftpclient_UI.c	/^void data_transfer_with_server(const char *command, int cmd,$/;"	f	signature:(const char *command, int cmd, const char *ok_str, int len, void *info)
+date	defines.h	/^		 gchar *date;$/;"	m	struct:__anon3	access:public
+deal_with_error	ftpclient_UI.c	/^void deal_with_error(gint flag)$/;"	f	signature:(gint flag)
+deal_with_error	ftpclient_UI.h	/^	void deal_with_error(gint flag);$/;"	p	signature:(gint flag)
+delete_event_top_window	ftpclient_UI.c	/^gint delete_event_top_window(GtkWidget *widget, GdkEvent *event, gpointer data)$/;"	f	signature:(GtkWidget *widget, GdkEvent *event, gpointer data)
+destroy	ftpclient_UI.c	/^void destroy(GtkWidget *widget, gpointer data)$/;"	f	signature:(GtkWidget *widget, gpointer data)
+destroy_widget	ftpclient_UI.c	/^void destroy_widget(GtkWidget *widget, gpointer data)$/;"	f	signature:(GtkWidget *widget, gpointer data)
+detach_attr	ftpclient_UI.c	/^pthread_attr_t detach_attr;$/;"	v
+entry_IP	ftpclient_UI.c	/^GtkWidget *entry_IP;$/;"	v
+entry_PASSWD	ftpclient_UI.c	/^GtkWidget *entry_PASSWD;$/;"	v
+entry_PORT	ftpclient_UI.c	/^GtkWidget *entry_PORT;$/;"	v
+entry_buffer_serverwd	ftpclient_UI.c	/^GtkEntryBuffer *entry_buffer_serverwd;$/;"	v
+entry_localwd	ftpclient_UI.c	/^static GtkWidget *entry_localwd;  	\/*current absolute path*\/$/;"	v	file:
+entry_username	ftpclient_UI.c	/^GtkWidget *entry_username;$/;"	v
+fd	ftpclient_UI.c	/^	int fd;$/;"	m	struct:__anon5	file:	access:public
+fd_sock	ftpclient_UI.c	/^}fd_sock;$/;"	t	typeref:struct:__anon5	file:
+file_buf	defines.h	/^	struct file_buf$/;"	s
+file_buf	defines.h	/^	typedef struct file_buf file_buf;$/;"	t	typeref:struct:file_buf
+file_buf::file_data	defines.h	/^		char file_data[READBUFSIZE];$/;"	m	struct:file_buf	access:public
+file_buf::next	defines.h	/^		file_buf *next;$/;"	m	struct:file_buf	access:public
+file_data	defines.h	/^		char file_data[READBUFSIZE];$/;"	m	struct:file_buf	access:public
+file_data	defines.h	/^		char file_data[READBUFSIZE];$/;"	m	struct:file_info	access:public
+file_info	defines.h	/^	struct file_info$/;"	s
+file_info	defines.h	/^	typedef struct file_info file_info;$/;"	t	typeref:struct:file_info
+file_info::file_data	defines.h	/^		char file_data[READBUFSIZE];$/;"	m	struct:file_info	access:public
+file_info::next	defines.h	/^		struct file_info *next;$/;"	m	struct:file_info	typeref:struct:file_info::file_info	access:public
+file_name	defines.h	/^		 char *file_name;$/;"	m	struct:__anon3	access:public
+file_size	defines.h	/^      	 	 guint file_size;$/;"	m	struct:__anon3	access:public
+file_state	defines.h	/^		 gchar *file_state;$/;"	m	struct:__anon3	access:public
+filebuf_head	defines.h	/^	extern file_buf *filebuf_head;$/;"	x
+filebuf_head	transfer.c	/^file_buf *filebuf_head = NULL;$/;"	v
+filebuf_tail	defines.h	/^	extern file_buf *filebuf_tail;$/;"	x
+filebuf_tail	transfer.c	/^file_buf *filebuf_tail  = NULL;$/;"	v
+fileinfo_head	defines.h	/^	extern file_info *fileinfo_head;$/;"	x
+fileinfo_head	fileutils.c	/^file_info *fileinfo_head = NULL;$/;"	v
+fileinfo_tail	defines.h	/^	extern file_info *fileinfo_tail;$/;"	x
+fileinfo_tail	fileutils.c	/^file_info *fileinfo_tail = NULL;$/;"	v
+first_open	fileutils.c	/^static gboolean first_open = TRUE;$/;"	v	file:
+free_file	fileutils.c	/^void free_file(File **file,int sum_files)$/;"	f	signature:(File **file,int sum_files)
+free_file	fileutils.h	/^	void free_file( File **file,int sum_files);$/;"	p	signature:( File **file,int sum_files)
+free_remote_fileinfo	fileutils.c	/^void free_remote_fileinfo(file_info **head)$/;"	f	signature:(file_info **head)
+free_remote_filelist	transfer.c	/^void free_remote_filelist(file_buf **head)$/;"	f	signature:(file_buf **head)
+free_remote_filelist	transfer.h	/^	void free_remote_filelist(file_buf **head);$/;"	p	signature:(file_buf **head)
+fs_info	ftpclient_UI.c	/^fd_sock *fs_info;	$/;"	v
+get_226_reply	ftpclient_UI.c	/^void get_226_reply(int command_sock)$/;"	f	signature:(int command_sock)
+get_226_reply	ftpclient_UI.h	/^	void get_226_reply(int command_sock);$/;"	p	signature:(int command_sock)
+get_data_sock	ftpclient_UI.c	/^void get_data_sock(int *data_sock)$/;"	f	signature:(int *data_sock)
+get_data_sock	ftpclient_UI.h	/^	void get_data_sock(int *data_sock);$/;"	p	signature:(int *data_sock)
+get_file_info	fileutils.c	/^gboolean get_file_info(char *file_name, File *local_file)$/;"	f	signature:(char *file_name, File *local_file)
+get_file_info	fileutils.h	/^	gboolean get_file_info(char *file_name,  File *local_file);$/;"	p	signature:(char *file_name, File *local_file)
+get_file_info_stat	fileutils.c	/^gboolean get_file_info_stat(const char *file_name,struct stat *s_buff, File *local_file)$/;"	f	signature:(const char *file_name,struct stat *s_buff, File *local_file)
+get_file_info_stat	fileutils.h	/^	gboolean get_file_info_stat(const char *file_name,struct stat *s_buff, File *local_file);$/;"	p	signature:(const char *file_name,struct stat *s_buff, File *local_file)
+get_remote_filelist	transfer.c	/^gint get_remote_filelist(int data_fd)$/;"	f	signature:(int data_fd)
+get_remote_filelist	transfer.h	/^	gint get_remote_filelist(int data_fd);$/;"	p	signature:(int data_fd)
+get_remote_list	ftpclient_UI.c	/^void get_remote_list()$/;"	f
+get_remote_list	ftpclient_UI.h	/^	void get_remote_list();$/;"	p	signature:()
+get_reply_from_server	transfer.c	/^gboolean get_reply_from_server(int sock, char *result)$/;"	f	signature:(int sock, char *result)
+get_reply_from_server	transfer.h	/^	gboolean get_reply_from_server(int sock, char *result);$/;"	p	signature:(int sock, char *result)
+get_work_directory	ftpclient_UI.c	/^void get_work_directory(char * reply)$/;"	f	signature:(char * reply)
+group_name	defines.h	/^		 gchar *group_name;$/;"	m	struct:__anon3	access:public
+gtk_mutex	ftpclient_UI.c	/^pthread_mutex_t gtk_mutex;$/;"	v
+ip	defines.h	/^		char *ip;$/;"	m	struct:__anon4	access:public
+is_abort_down	ftpclient_UI.c	/^gboolean is_abort_down = FALSE;$/;"	v
+local_file	ftpclient_UI.h	/^	static File *local_file = NULL;$/;"	v
+main	main.c	/^main(int argc, char *argv[])$/;"	f	signature:(int argc, char *argv[])
+make_data_connection	ftpclient_UI.c	/^void * make_data_connection(void *arg)$/;"	f	signature:(void *arg)
+make_data_connection	ftpclient_UI.h	/^	void * make_data_connection(void *arg);$/;"	p	signature:(void *arg)
+make_server_connection	transfer.c	/^int make_server_connection(const gchar *host, const gchar *service,int nsec)$/;"	f	signature:(const gchar *host, const gchar *service,int nsec)
+make_server_connection	transfer.h	/^	int make_server_connection(const gchar *host, const gchar *service,int nsec);$/;"	p	signature:(const gchar *host, const gchar *service,int nsec)
+malloc_file	fileutils.c	/^gboolean malloc_file( File *file, int sumfiles)$/;"	f	signature:( File *file, int sumfiles)
+malloc_file	fileutils.h	/^	gboolean malloc_file( File *file, int sum_files);$/;"	p	signature:( File *file, int sum_files)
+model	ftpclient_UI.h	/^	static GtkTreeModel *model = NULL;$/;"	v
+next	defines.h	/^		file_buf *next;$/;"	m	struct:file_buf	access:public
+next	defines.h	/^		struct file_info *next;$/;"	m	struct:file_info	typeref:struct:file_info::file_info	access:public
+on_changed	ftpclient_UI.c	/^void on_changed(GtkWidget *widget, gpointer file)$/;"	f	signature:(GtkWidget *widget, gpointer file)
+on_changed	ftpclient_UI.h	/^	void on_changed(GtkWidget *widget, gpointer file);$/;"	p	signature:(GtkWidget *widget, gpointer file)
+own_name	defines.h	/^		 gchar *own_name;$/;"	m	struct:__anon3	access:public
+parse_file_buf	fileutils.c	/^void parse_file_buf(file_buf *filebuf_head)$/;"	f	signature:(file_buf *filebuf_head)
+parse_file_buf	fileutils.h	/^	void parse_file_buf(file_buf *filebuf_head);$/;"	p	signature:(file_buf *filebuf_head)
+parse_file_info	fileutils.c	/^void parse_file_info(file_info *fi_ptr, File *f_ptr)$/;"	f	signature:(file_info *fi_ptr, File *f_ptr)
+parse_file_info	fileutils.h	/^	void parse_file_info(file_info *fi_ptr, File *f_ptr);$/;"	p	signature:(file_info *fi_ptr, File *f_ptr)
+port_data	defines.h	/^	}port_data;$/;"	t	typeref:struct:__anon4
+port_listen_sock	defines.h	/^	int port_listen_sock;$/;"	v
+port_transfer_accept	ftpclient_UI.c	/^void port_transfer_accept(int *data_sock)$/;"	f	signature:(int *data_sock)
+port_transfer_accept	ftpclient_UI.h	/^	void port_transfer_accept(int *data_sock);$/;"	p	signature:(int *data_sock)
+port_transfer_bind	transfer.c	/^gint port_transfer_bind(struct sockaddr_in *port_server_sin,const char *ip)$/;"	f	signature:(struct sockaddr_in *port_server_sin,const char *ip)
+port_transfer_bind	transfer.h	/^	gint port_transfer_bind(struct sockaddr_in *port_server_sin,const char *ip);$/;"	p	signature:(struct sockaddr_in *port_server_sin,const char *ip)
+print_package	fileutils.c	/^void print_package(file_buf *head)$/;"	f	signature:(file_buf *head)
+remote_file	ftpclient_UI.h	/^	static File *remote_file = NULL;$/;"	v
+remote_filenum	defines.h	/^	extern  gint remote_filenum;$/;"	x
+remote_filenum	transfer.c	/^gint remote_filenum = 0;$/;"	v
+remote_list_thread	ftpclient_UI.c	/^void *remote_list_thread(void *arg)$/;"	f	signature:(void *arg)
+remote_list_thread	ftpclient_UI.h	/^	void *remote_list_thread(void *arg);$/;"	p	signature:(void *arg)
+reply	ftpclient_UI.c	/^char reply[100];$/;"	v
+response_button_abort_down	ftpclient_UI.c	/^gboolean response_button_abort_down(GtkWidget *widget, gpointer data)$/;"	f	signature:(GtkWidget *widget, gpointer data)
+response_button_abort_down	ftpclient_UI.h	/^	gboolean response_button_abort_down(GtkWidget *widget, gpointer data);$/;"	p	signature:(GtkWidget *widget, gpointer data)
+response_button_login_down	ftpclient_UI.c	/^gboolean response_button_login_down(GtkWidget *widget, GdkEvent *event, gpointer data)$/;"	f	signature:(GtkWidget *widget, GdkEvent *event, gpointer data)
+response_button_login_down	ftpclient_UI.h	/^	gboolean response_button_login_down(GtkWidget *widget, GdkEvent *event, gpointer data);$/;"	p	signature:(GtkWidget *widget, GdkEvent *event, gpointer data)
+response_button_upload	ftpclient_UI.c	/^void response_button_upload(GtkWidget *widget)$/;"	f	signature:(GtkWidget *widget)
+response_entry_enter	ftpclient_UI.c	/^gboolean response_entry_enter(GtkWidget *widget, GdkEvent *event, gpointer data)$/;"	f	signature:(GtkWidget *widget, GdkEvent *event, gpointer data)
+response_entry_enter	ftpclient_UI.h	/^	gboolean response_entry_enter(GtkWidget *widget, GdkEvent *event, gpointer data);$/;"	p	signature:(GtkWidget *widget, GdkEvent *event, gpointer data)
+response_radio_button	ftpclient_UI.c	/^void response_radio_button(GtkWidget * widget, gpointer data)$/;"	f	signature:(GtkWidget * widget, gpointer data)
+response_radio_button	ftpclient_UI.h	/^	void response_radio_button(GtkWidget *widget, gpointer data);$/;"	p	signature:(GtkWidget *widget, gpointer data)
+send_and_response	ftpclient_UI.c	/^gboolean send_and_response(int sock, char *command, const char *ok_str, char *reply, int len)$/;"	f	signature:(int sock, char *command, const char *ok_str, char *reply, int len)
+send_and_response	ftpclient_UI.h	/^	gboolean send_and_response(int sock, char *command, const char *ok_str, char *reply, int len);$/;"	p	signature:(int sock, char *command, const char *ok_str, char *reply, int len)
+send_command_to_server	transfer.c	/^gboolean send_command_to_server(int sock, const char *command)$/;"	f	signature:(int sock, const char *command)
+send_command_to_server	transfer.h	/^	gboolean send_command_to_server(int sock, const char *command);$/;"	p	signature:(int sock, const char *command)
+send_file_thread	ftpclient_UI.c	/^void *send_file_thread(void *info)$/;"	f	signature:(void *info)
+send_file_thread	ftpclient_UI.h	/^	void *send_file_thread(void *info);$/;"	p	signature:(void *info)
+send_file_to_server	transfer.c	/^gboolean send_file_to_server(int fd, int data_sock)$/;"	f	signature:(int fd, int data_sock)
+send_file_to_server	transfer.h	/^	gboolean send_file_to_server(int fd, int data_sock);$/;"	p	signature:(int fd, int data_sock)
+set_data	transfer.c	/^void set_data(char *src, char *dest)$/;"	f	signature:(char *src, char *dest)
+set_data	transfer.h	/^	void set_data(char *src, char *dest);$/;"	p	signature:(char *src, char *dest)
+set_data_into_file	fileutils.c	/^void set_data_into_file(int *j, int *i, char *dest,const char *line) $/;"	f	signature:(int *j, int *i, char *dest,const char *line)
+set_file_data_into_fileinfo	fileutils.c	/^void set_file_data_into_fileinfo(char *info, char *file_data, char *left,$/;"	f	signature:(char *info, char *file_data, char *left, file_info *fileinfo_head, file_info **fileinfo_tail)
+set_file_data_into_fileinfo	fileutils.h	/^	void set_file_data_into_fileinfo(char *info, char *file_data, char *left,file_info *fileinfo_head, file_info **fileinfo_tail);$/;"	p	signature:(char *info, char *file_data, char *left,file_info *fileinfo_head, file_info **fileinfo_tail)
+set_remote_filelist_treeview_model	ftpclient_UI.c	/^gboolean set_remote_filelist_treeview_model()$/;"	f
+show_text_news	ftpclient_UI.c	/^void show_text_news(const char *msg)$/;"	f	signature:(const char *msg)
+show_text_news	ftpclient_UI.h	/^	void show_text_news(const char *msg);$/;"	p	signature:(const char *msg)
+sum_files	defines.h	/^	extern  int sum_files;$/;"	x
+sum_files	fileutils.c	/^int sum_files;$/;"	v
+sum_files	ftpclient_UI.c	/^int sum_files;$/;"	v
+sw_locallist	ftpclient_UI.c	/^GtkWidget *sw_locallist;$/;"	v
+sw_remotelist	ftpclient_UI.c	/^GtkWidget *sw_remotelist;$/;"	v
+text_mark_log	ftpclient_UI.c	/^GtkTextMark *text_mark_log;$/;"	v
+text_view_interract	ftpclient_UI.c	/^GtkWidget *text_view_interract;$/;"	v
+thread_upload_stor	ftpclient_UI.c	/^pthread_t thread_upload_stor;$/;"	v
+total_filenum	fileutils.c	/^gint total_filenum(struct dirent *d_next, DIR *dir)$/;"	f	signature:(struct dirent *d_next, DIR *dir)
+total_filenum	fileutils.h	/^	gint total_filenum(struct dirent *d_next, DIR *dir);$/;"	p	signature:(struct dirent *d_next, DIR *dir)
+treeview_local	ftpclient_UI.c	/^GtkWidget *treeview_local;$/;"	v
+treeview_remote	ftpclient_UI.c	/^GtkWidget *treeview_remote;$/;"	v
+upload_file	ftpclient_UI.c	/^File upload_file;$/;"	v
+upload_stor_thread	ftpclient_UI.c	/^void * upload_stor_thread(void *arg)$/;"	f	signature:(void *arg)
+upload_stor_thread	ftpclient_UI.h	/^	void * upload_stor_thread(void *arg);$/;"	p	signature:(void *arg)
+write_locallist	fileutils.c	/^gboolean write_locallist(const char *current_dir, File **local_file)$/;"	f	signature:(const char *current_dir, File **local_file)
+write_locallist	fileutils.h	/^	gboolean write_locallist(const char *current_dir,  File **local_file);$/;"	p	signature:(const char *current_dir, File **local_file)
+write_remotelist	fileutils.c	/^gboolean write_remotelist( File ** remote_file)$/;"	f	signature:( File ** remote_file)
+write_remotelist	fileutils.h	/^	gboolean write_remotelist( File ** remote_file);$/;"	p	signature:( File ** remote_file)
